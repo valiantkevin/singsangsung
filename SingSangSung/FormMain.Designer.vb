@@ -30,34 +30,33 @@ Partial Class FormMain
         Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.btRoom1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.btRoom2 = New System.Windows.Forms.Button()
+        Me.btRoom20 = New System.Windows.Forms.Button()
+        Me.btRoom19 = New System.Windows.Forms.Button()
+        Me.btRoom18 = New System.Windows.Forms.Button()
+        Me.btRoom17 = New System.Windows.Forms.Button()
+        Me.btRoom16 = New System.Windows.Forms.Button()
+        Me.btRoom15 = New System.Windows.Forms.Button()
+        Me.btRoom14 = New System.Windows.Forms.Button()
+        Me.btRoom13 = New System.Windows.Forms.Button()
+        Me.btRoom12 = New System.Windows.Forms.Button()
+        Me.btRoom11 = New System.Windows.Forms.Button()
+        Me.btRoom10 = New System.Windows.Forms.Button()
+        Me.btRoom9 = New System.Windows.Forms.Button()
+        Me.btRoom8 = New System.Windows.Forms.Button()
+        Me.btRoom7 = New System.Windows.Forms.Button()
+        Me.btRoom6 = New System.Windows.Forms.Button()
         Me.btRoom4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button16 = New System.Windows.Forms.Button()
-        Me.Button17 = New System.Windows.Forms.Button()
-        Me.Button18 = New System.Windows.Forms.Button()
-        Me.Button19 = New System.Windows.Forms.Button()
-        Me.Button20 = New System.Windows.Forms.Button()
-        Me.Button21 = New System.Windows.Forms.Button()
-        Me.Button22 = New System.Windows.Forms.Button()
-        Me.Button23 = New System.Windows.Forms.Button()
-        Me.Button24 = New System.Windows.Forms.Button()
-        Me.Button25 = New System.Windows.Forms.Button()
+        Me.btRoom3 = New System.Windows.Forms.Button()
+        Me.btRoom2 = New System.Windows.Forms.Button()
+        Me.btRoom5 = New System.Windows.Forms.Button()
+        Me.btRoom1 = New System.Windows.Forms.Button()
+        Me.lbRoomNumber = New System.Windows.Forms.Label()
+        Me.lbRoomClass = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -100,13 +99,13 @@ Partial Class FormMain
         'ReportToolStripMenuItem
         '
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(137, 26)
         Me.ReportToolStripMenuItem.Text = "Report"
         '
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(137, 26)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'SplitContainer1
@@ -117,52 +116,188 @@ Partial Class FormMain
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button25)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button24)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button23)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button22)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button21)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button20)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button19)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button18)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button17)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button16)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button15)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button14)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button13)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button12)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button11)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button10)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button9)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button8)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button7)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button6)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button5)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom20)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom19)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom18)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom17)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom16)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom15)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom14)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom13)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom12)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom11)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom10)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom9)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom8)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom7)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom6)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom4)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom3)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom2)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom5)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btRoom1)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Label1)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.lbRoomClass)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.lbRoomNumber)
         Me.SplitContainer1.Size = New System.Drawing.Size(1358, 537)
-        Me.SplitContainer1.SplitterDistance = 336
+        Me.SplitContainer1.SplitterDistance = 330
         Me.SplitContainer1.TabIndex = 1
         '
-        'btRoom1
+        'btRoom20
         '
-        Me.btRoom1.Location = New System.Drawing.Point(3, 3)
-        Me.btRoom1.Name = "btRoom1"
-        Me.btRoom1.Size = New System.Drawing.Size(60, 60)
-        Me.btRoom1.TabIndex = 0
-        Me.btRoom1.Text = "Room 1"
-        Me.btRoom1.UseVisualStyleBackColor = True
+        Me.btRoom20.Location = New System.Drawing.Point(267, 201)
+        Me.btRoom20.Name = "btRoom20"
+        Me.btRoom20.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom20.TabIndex = 19
+        Me.btRoom20.Text = "Room 20"
+        Me.btRoom20.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btRoom19
         '
-        Me.Button2.Location = New System.Drawing.Point(267, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(60, 60)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Room 5"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btRoom19.Location = New System.Drawing.Point(201, 201)
+        Me.btRoom19.Name = "btRoom19"
+        Me.btRoom19.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom19.TabIndex = 18
+        Me.btRoom19.Text = "Room 19"
+        Me.btRoom19.UseVisualStyleBackColor = True
+        '
+        'btRoom18
+        '
+        Me.btRoom18.Location = New System.Drawing.Point(135, 201)
+        Me.btRoom18.Name = "btRoom18"
+        Me.btRoom18.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom18.TabIndex = 17
+        Me.btRoom18.Text = "Room 18"
+        Me.btRoom18.UseVisualStyleBackColor = True
+        '
+        'btRoom17
+        '
+        Me.btRoom17.Location = New System.Drawing.Point(69, 201)
+        Me.btRoom17.Name = "btRoom17"
+        Me.btRoom17.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom17.TabIndex = 16
+        Me.btRoom17.Text = "Room 17"
+        Me.btRoom17.UseVisualStyleBackColor = True
+        '
+        'btRoom16
+        '
+        Me.btRoom16.Location = New System.Drawing.Point(3, 201)
+        Me.btRoom16.Name = "btRoom16"
+        Me.btRoom16.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom16.TabIndex = 15
+        Me.btRoom16.Text = "Room 16"
+        Me.btRoom16.UseVisualStyleBackColor = True
+        '
+        'btRoom15
+        '
+        Me.btRoom15.Location = New System.Drawing.Point(267, 135)
+        Me.btRoom15.Name = "btRoom15"
+        Me.btRoom15.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom15.TabIndex = 14
+        Me.btRoom15.Text = "Room 15"
+        Me.btRoom15.UseVisualStyleBackColor = True
+        '
+        'btRoom14
+        '
+        Me.btRoom14.Location = New System.Drawing.Point(201, 135)
+        Me.btRoom14.Name = "btRoom14"
+        Me.btRoom14.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom14.TabIndex = 13
+        Me.btRoom14.Text = "Room 14"
+        Me.btRoom14.UseVisualStyleBackColor = True
+        '
+        'btRoom13
+        '
+        Me.btRoom13.Location = New System.Drawing.Point(135, 135)
+        Me.btRoom13.Name = "btRoom13"
+        Me.btRoom13.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom13.TabIndex = 12
+        Me.btRoom13.Text = "Room 13"
+        Me.btRoom13.UseVisualStyleBackColor = True
+        '
+        'btRoom12
+        '
+        Me.btRoom12.Location = New System.Drawing.Point(69, 135)
+        Me.btRoom12.Name = "btRoom12"
+        Me.btRoom12.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom12.TabIndex = 11
+        Me.btRoom12.Text = "Room 12"
+        Me.btRoom12.UseVisualStyleBackColor = True
+        '
+        'btRoom11
+        '
+        Me.btRoom11.Location = New System.Drawing.Point(3, 135)
+        Me.btRoom11.Name = "btRoom11"
+        Me.btRoom11.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom11.TabIndex = 10
+        Me.btRoom11.Text = "Room 11"
+        Me.btRoom11.UseVisualStyleBackColor = True
+        '
+        'btRoom10
+        '
+        Me.btRoom10.Location = New System.Drawing.Point(267, 69)
+        Me.btRoom10.Name = "btRoom10"
+        Me.btRoom10.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom10.TabIndex = 9
+        Me.btRoom10.Text = "Room 10"
+        Me.btRoom10.UseVisualStyleBackColor = True
+        '
+        'btRoom9
+        '
+        Me.btRoom9.Location = New System.Drawing.Point(201, 69)
+        Me.btRoom9.Name = "btRoom9"
+        Me.btRoom9.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom9.TabIndex = 8
+        Me.btRoom9.Text = "Room 9"
+        Me.btRoom9.UseVisualStyleBackColor = True
+        '
+        'btRoom8
+        '
+        Me.btRoom8.Location = New System.Drawing.Point(135, 69)
+        Me.btRoom8.Name = "btRoom8"
+        Me.btRoom8.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom8.TabIndex = 7
+        Me.btRoom8.Text = "Room 8"
+        Me.btRoom8.UseVisualStyleBackColor = True
+        '
+        'btRoom7
+        '
+        Me.btRoom7.Location = New System.Drawing.Point(69, 69)
+        Me.btRoom7.Name = "btRoom7"
+        Me.btRoom7.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom7.TabIndex = 6
+        Me.btRoom7.Text = "Room 7"
+        Me.btRoom7.UseVisualStyleBackColor = True
+        '
+        'btRoom6
+        '
+        Me.btRoom6.Location = New System.Drawing.Point(3, 69)
+        Me.btRoom6.Name = "btRoom6"
+        Me.btRoom6.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom6.TabIndex = 5
+        Me.btRoom6.Text = "Room 6"
+        Me.btRoom6.UseVisualStyleBackColor = True
+        '
+        'btRoom4
+        '
+        Me.btRoom4.Location = New System.Drawing.Point(201, 3)
+        Me.btRoom4.Name = "btRoom4"
+        Me.btRoom4.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom4.TabIndex = 4
+        Me.btRoom4.Text = "Room 4"
+        Me.btRoom4.UseVisualStyleBackColor = True
+        '
+        'btRoom3
+        '
+        Me.btRoom3.Location = New System.Drawing.Point(135, 3)
+        Me.btRoom3.Name = "btRoom3"
+        Me.btRoom3.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom3.TabIndex = 3
+        Me.btRoom3.Text = "Room 3"
+        Me.btRoom3.UseVisualStyleBackColor = True
         '
         'btRoom2
         '
@@ -173,203 +308,50 @@ Partial Class FormMain
         Me.btRoom2.Text = "Room 2"
         Me.btRoom2.UseVisualStyleBackColor = True
         '
-        'btRoom4
+        'btRoom5
         '
-        Me.btRoom4.Location = New System.Drawing.Point(135, 3)
-        Me.btRoom4.Name = "btRoom4"
-        Me.btRoom4.Size = New System.Drawing.Size(60, 60)
-        Me.btRoom4.TabIndex = 3
-        Me.btRoom4.Text = "Room 3"
-        Me.btRoom4.UseVisualStyleBackColor = True
+        Me.btRoom5.Location = New System.Drawing.Point(267, 3)
+        Me.btRoom5.Name = "btRoom5"
+        Me.btRoom5.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom5.TabIndex = 1
+        Me.btRoom5.Text = "Room 5"
+        Me.btRoom5.UseVisualStyleBackColor = True
         '
-        'Button5
+        'btRoom1
         '
-        Me.Button5.Location = New System.Drawing.Point(201, 3)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(60, 60)
-        Me.Button5.TabIndex = 4
-        Me.Button5.Text = "Room 4"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btRoom1.Location = New System.Drawing.Point(3, 3)
+        Me.btRoom1.Name = "btRoom1"
+        Me.btRoom1.Size = New System.Drawing.Size(60, 60)
+        Me.btRoom1.TabIndex = 0
+        Me.btRoom1.Text = "Room 1"
+        Me.btRoom1.UseVisualStyleBackColor = True
         '
-        'Button6
+        'lbRoomNumber
         '
-        Me.Button6.Location = New System.Drawing.Point(3, 69)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(60, 60)
-        Me.Button6.TabIndex = 5
-        Me.Button6.Text = "Room 6"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.lbRoomNumber.AutoSize = True
+        Me.lbRoomNumber.Location = New System.Drawing.Point(21, 16)
+        Me.lbRoomNumber.Name = "lbRoomNumber"
+        Me.lbRoomNumber.Size = New System.Drawing.Size(99, 17)
+        Me.lbRoomNumber.TabIndex = 0
+        Me.lbRoomNumber.Text = "Room Number"
         '
-        'Button7
+        'lbRoomClass
         '
-        Me.Button7.Location = New System.Drawing.Point(69, 69)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(60, 60)
-        Me.Button7.TabIndex = 6
-        Me.Button7.Text = "Room 7"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.lbRoomClass.AutoSize = True
+        Me.lbRoomClass.Location = New System.Drawing.Point(21, 46)
+        Me.lbRoomClass.Name = "lbRoomClass"
+        Me.lbRoomClass.Size = New System.Drawing.Size(83, 17)
+        Me.lbRoomClass.TabIndex = 1
+        Me.lbRoomClass.Text = "Room Class"
         '
-        'Button8
+        'Label1
         '
-        Me.Button8.Location = New System.Drawing.Point(135, 69)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(60, 60)
-        Me.Button8.TabIndex = 7
-        Me.Button8.Text = "Room 8"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.Location = New System.Drawing.Point(201, 69)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(60, 60)
-        Me.Button9.TabIndex = 8
-        Me.Button9.Text = "Room 9"
-        Me.Button9.UseVisualStyleBackColor = True
-        '
-        'Button10
-        '
-        Me.Button10.Location = New System.Drawing.Point(267, 69)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(60, 60)
-        Me.Button10.TabIndex = 9
-        Me.Button10.Text = "Room 10"
-        Me.Button10.UseVisualStyleBackColor = True
-        '
-        'Button11
-        '
-        Me.Button11.Location = New System.Drawing.Point(3, 135)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(60, 60)
-        Me.Button11.TabIndex = 10
-        Me.Button11.Text = "Room 1"
-        Me.Button11.UseVisualStyleBackColor = True
-        '
-        'Button12
-        '
-        Me.Button12.Location = New System.Drawing.Point(69, 135)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(60, 60)
-        Me.Button12.TabIndex = 11
-        Me.Button12.Text = "Room 1"
-        Me.Button12.UseVisualStyleBackColor = True
-        '
-        'Button13
-        '
-        Me.Button13.Location = New System.Drawing.Point(135, 135)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(60, 60)
-        Me.Button13.TabIndex = 12
-        Me.Button13.Text = "Room 1"
-        Me.Button13.UseVisualStyleBackColor = True
-        '
-        'Button14
-        '
-        Me.Button14.Location = New System.Drawing.Point(201, 135)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(60, 60)
-        Me.Button14.TabIndex = 13
-        Me.Button14.Text = "Room 1"
-        Me.Button14.UseVisualStyleBackColor = True
-        '
-        'Button15
-        '
-        Me.Button15.Location = New System.Drawing.Point(267, 135)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(60, 60)
-        Me.Button15.TabIndex = 14
-        Me.Button15.Text = "Room 1"
-        Me.Button15.UseVisualStyleBackColor = True
-        '
-        'Button16
-        '
-        Me.Button16.Location = New System.Drawing.Point(3, 201)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(60, 60)
-        Me.Button16.TabIndex = 15
-        Me.Button16.Text = "Room 1"
-        Me.Button16.UseVisualStyleBackColor = True
-        '
-        'Button17
-        '
-        Me.Button17.Location = New System.Drawing.Point(69, 201)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(60, 60)
-        Me.Button17.TabIndex = 16
-        Me.Button17.Text = "Room 1"
-        Me.Button17.UseVisualStyleBackColor = True
-        '
-        'Button18
-        '
-        Me.Button18.Location = New System.Drawing.Point(135, 201)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(60, 60)
-        Me.Button18.TabIndex = 17
-        Me.Button18.Text = "Room 1"
-        Me.Button18.UseVisualStyleBackColor = True
-        '
-        'Button19
-        '
-        Me.Button19.Location = New System.Drawing.Point(201, 201)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(60, 60)
-        Me.Button19.TabIndex = 18
-        Me.Button19.Text = "Room 1"
-        Me.Button19.UseVisualStyleBackColor = True
-        '
-        'Button20
-        '
-        Me.Button20.Location = New System.Drawing.Point(267, 201)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(60, 60)
-        Me.Button20.TabIndex = 19
-        Me.Button20.Text = "Room 1"
-        Me.Button20.UseVisualStyleBackColor = True
-        '
-        'Button21
-        '
-        Me.Button21.Location = New System.Drawing.Point(3, 267)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(60, 60)
-        Me.Button21.TabIndex = 20
-        Me.Button21.Text = "Room 1"
-        Me.Button21.UseVisualStyleBackColor = True
-        '
-        'Button22
-        '
-        Me.Button22.Location = New System.Drawing.Point(69, 267)
-        Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(60, 60)
-        Me.Button22.TabIndex = 21
-        Me.Button22.Text = "Room 1"
-        Me.Button22.UseVisualStyleBackColor = True
-        '
-        'Button23
-        '
-        Me.Button23.Location = New System.Drawing.Point(135, 267)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(60, 60)
-        Me.Button23.TabIndex = 22
-        Me.Button23.Text = "Room 1"
-        Me.Button23.UseVisualStyleBackColor = True
-        '
-        'Button24
-        '
-        Me.Button24.Location = New System.Drawing.Point(201, 267)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(60, 60)
-        Me.Button24.TabIndex = 23
-        Me.Button24.Text = "Room 1"
-        Me.Button24.UseVisualStyleBackColor = True
-        '
-        'Button25
-        '
-        Me.Button25.Location = New System.Drawing.Point(267, 267)
-        Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(60, 60)
-        Me.Button25.TabIndex = 24
-        Me.Button25.Text = "Room 1"
-        Me.Button25.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(21, 78)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 17)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Price/Hour"
         '
         'FormMain
         '
@@ -384,6 +366,8 @@ Partial Class FormMain
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -399,29 +383,27 @@ Partial Class FormMain
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents Button25 As Button
-    Friend WithEvents Button24 As Button
-    Friend WithEvents Button23 As Button
-    Friend WithEvents Button22 As Button
-    Friend WithEvents Button21 As Button
-    Friend WithEvents Button20 As Button
-    Friend WithEvents Button19 As Button
-    Friend WithEvents Button18 As Button
-    Friend WithEvents Button17 As Button
-    Friend WithEvents Button16 As Button
-    Friend WithEvents Button15 As Button
-    Friend WithEvents Button14 As Button
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents btRoom20 As Button
+    Friend WithEvents btRoom19 As Button
+    Friend WithEvents btRoom18 As Button
+    Friend WithEvents btRoom17 As Button
+    Friend WithEvents btRoom16 As Button
+    Friend WithEvents btRoom15 As Button
+    Friend WithEvents btRoom14 As Button
+    Friend WithEvents btRoom13 As Button
+    Friend WithEvents btRoom12 As Button
+    Friend WithEvents btRoom11 As Button
+    Friend WithEvents btRoom10 As Button
+    Friend WithEvents btRoom9 As Button
+    Friend WithEvents btRoom8 As Button
+    Friend WithEvents btRoom7 As Button
+    Friend WithEvents btRoom6 As Button
     Friend WithEvents btRoom4 As Button
+    Friend WithEvents btRoom3 As Button
     Friend WithEvents btRoom2 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btRoom5 As Button
     Friend WithEvents btRoom1 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lbRoomClass As Label
+    Friend WithEvents lbRoomNumber As Label
 End Class
