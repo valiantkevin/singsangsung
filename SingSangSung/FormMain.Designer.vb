@@ -50,34 +50,32 @@ Partial Class FormMain
         Me.btRoom2 = New System.Windows.Forms.Button()
         Me.btRoom5 = New System.Windows.Forms.Button()
         Me.btRoom1 = New System.Windows.Forms.Button()
+        Me.btPayment = New System.Windows.Forms.Button()
+        Me.pnFnB = New System.Windows.Forms.Panel()
+        Me.cbPortion = New System.Windows.Forms.ComboBox()
+        Me.tbFnBCode = New System.Windows.Forms.TextBox()
+        Me.pnRoomOrder = New System.Windows.Forms.Panel()
+        Me.btOrderRoom = New System.Windows.Forms.Button()
+        Me.cbAddTime = New System.Windows.Forms.ComboBox()
+        Me.lbAddTime = New System.Windows.Forms.Label()
+        Me.tbCustomerName = New System.Windows.Forms.TextBox()
+        Me.lbCustomerName = New System.Windows.Forms.Label()
+        Me.pnTime = New System.Windows.Forms.Panel()
+        Me.lbTimeLeft = New System.Windows.Forms.Label()
         Me.lbRoomPrice = New System.Windows.Forms.Label()
         Me.lbRoomClass = New System.Windows.Forms.Label()
         Me.lbRoomNumber = New System.Windows.Forms.Label()
         Me.pnRoomInfo = New System.Windows.Forms.Panel()
         Me.lbRoomCapacity = New System.Windows.Forms.Label()
-        Me.pnTime = New System.Windows.Forms.Panel()
-        Me.lbTimeLeft = New System.Windows.Forms.Label()
-        Me.pnRoomOrder = New System.Windows.Forms.Panel()
-        Me.lbCustomerName = New System.Windows.Forms.Label()
-        Me.tbCustomerName = New System.Windows.Forms.TextBox()
-        Me.lbAddTime = New System.Windows.Forms.Label()
-        Me.cbAddTime = New System.Windows.Forms.ComboBox()
-        Me.btOrderRoom = New System.Windows.Forms.Button()
-        Me.pnFnB = New System.Windows.Forms.Panel()
-        Me.tbFnBCode = New System.Windows.Forms.TextBox()
-        Me.cbPortion = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.btPayment = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        Me.pnRoomInfo.SuspendLayout()
-        Me.pnTime.SuspendLayout()
-        Me.pnRoomOrder.SuspendLayout()
         Me.pnFnB.SuspendLayout()
+        Me.pnRoomOrder.SuspendLayout()
+        Me.pnTime.SuspendLayout()
+        Me.pnRoomInfo.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -133,7 +131,7 @@ Partial Class FormMain
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 24)
-        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.SplitContainer1.Margin = New System.Windows.Forms.Padding(2)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
@@ -173,7 +171,7 @@ Partial Class FormMain
         'btRoom20
         '
         Me.btRoom20.Location = New System.Drawing.Point(200, 163)
-        Me.btRoom20.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom20.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom20.Name = "btRoom20"
         Me.btRoom20.Size = New System.Drawing.Size(45, 49)
         Me.btRoom20.TabIndex = 19
@@ -183,7 +181,7 @@ Partial Class FormMain
         'btRoom19
         '
         Me.btRoom19.Location = New System.Drawing.Point(151, 163)
-        Me.btRoom19.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom19.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom19.Name = "btRoom19"
         Me.btRoom19.Size = New System.Drawing.Size(45, 49)
         Me.btRoom19.TabIndex = 18
@@ -193,7 +191,7 @@ Partial Class FormMain
         'btRoom18
         '
         Me.btRoom18.Location = New System.Drawing.Point(101, 163)
-        Me.btRoom18.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom18.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom18.Name = "btRoom18"
         Me.btRoom18.Size = New System.Drawing.Size(45, 49)
         Me.btRoom18.TabIndex = 17
@@ -203,7 +201,7 @@ Partial Class FormMain
         'btRoom17
         '
         Me.btRoom17.Location = New System.Drawing.Point(52, 163)
-        Me.btRoom17.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom17.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom17.Name = "btRoom17"
         Me.btRoom17.Size = New System.Drawing.Size(45, 49)
         Me.btRoom17.TabIndex = 16
@@ -213,7 +211,7 @@ Partial Class FormMain
         'btRoom16
         '
         Me.btRoom16.Location = New System.Drawing.Point(2, 163)
-        Me.btRoom16.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom16.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom16.Name = "btRoom16"
         Me.btRoom16.Size = New System.Drawing.Size(45, 49)
         Me.btRoom16.TabIndex = 15
@@ -223,7 +221,7 @@ Partial Class FormMain
         'btRoom15
         '
         Me.btRoom15.Location = New System.Drawing.Point(200, 110)
-        Me.btRoom15.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom15.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom15.Name = "btRoom15"
         Me.btRoom15.Size = New System.Drawing.Size(45, 49)
         Me.btRoom15.TabIndex = 14
@@ -233,7 +231,7 @@ Partial Class FormMain
         'btRoom14
         '
         Me.btRoom14.Location = New System.Drawing.Point(151, 110)
-        Me.btRoom14.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom14.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom14.Name = "btRoom14"
         Me.btRoom14.Size = New System.Drawing.Size(45, 49)
         Me.btRoom14.TabIndex = 13
@@ -243,7 +241,7 @@ Partial Class FormMain
         'btRoom13
         '
         Me.btRoom13.Location = New System.Drawing.Point(101, 110)
-        Me.btRoom13.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom13.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom13.Name = "btRoom13"
         Me.btRoom13.Size = New System.Drawing.Size(45, 49)
         Me.btRoom13.TabIndex = 12
@@ -253,7 +251,7 @@ Partial Class FormMain
         'btRoom12
         '
         Me.btRoom12.Location = New System.Drawing.Point(52, 110)
-        Me.btRoom12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom12.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom12.Name = "btRoom12"
         Me.btRoom12.Size = New System.Drawing.Size(45, 49)
         Me.btRoom12.TabIndex = 11
@@ -263,7 +261,7 @@ Partial Class FormMain
         'btRoom11
         '
         Me.btRoom11.Location = New System.Drawing.Point(2, 110)
-        Me.btRoom11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom11.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom11.Name = "btRoom11"
         Me.btRoom11.Size = New System.Drawing.Size(45, 49)
         Me.btRoom11.TabIndex = 10
@@ -273,7 +271,7 @@ Partial Class FormMain
         'btRoom10
         '
         Me.btRoom10.Location = New System.Drawing.Point(200, 56)
-        Me.btRoom10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom10.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom10.Name = "btRoom10"
         Me.btRoom10.Size = New System.Drawing.Size(45, 49)
         Me.btRoom10.TabIndex = 9
@@ -283,7 +281,7 @@ Partial Class FormMain
         'btRoom9
         '
         Me.btRoom9.Location = New System.Drawing.Point(151, 56)
-        Me.btRoom9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom9.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom9.Name = "btRoom9"
         Me.btRoom9.Size = New System.Drawing.Size(45, 49)
         Me.btRoom9.TabIndex = 8
@@ -293,7 +291,7 @@ Partial Class FormMain
         'btRoom8
         '
         Me.btRoom8.Location = New System.Drawing.Point(101, 56)
-        Me.btRoom8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom8.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom8.Name = "btRoom8"
         Me.btRoom8.Size = New System.Drawing.Size(45, 49)
         Me.btRoom8.TabIndex = 7
@@ -303,7 +301,7 @@ Partial Class FormMain
         'btRoom7
         '
         Me.btRoom7.Location = New System.Drawing.Point(52, 56)
-        Me.btRoom7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom7.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom7.Name = "btRoom7"
         Me.btRoom7.Size = New System.Drawing.Size(45, 49)
         Me.btRoom7.TabIndex = 6
@@ -313,7 +311,7 @@ Partial Class FormMain
         'btRoom6
         '
         Me.btRoom6.Location = New System.Drawing.Point(2, 56)
-        Me.btRoom6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom6.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom6.Name = "btRoom6"
         Me.btRoom6.Size = New System.Drawing.Size(45, 49)
         Me.btRoom6.TabIndex = 5
@@ -323,7 +321,7 @@ Partial Class FormMain
         'btRoom4
         '
         Me.btRoom4.Location = New System.Drawing.Point(151, 2)
-        Me.btRoom4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom4.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom4.Name = "btRoom4"
         Me.btRoom4.Size = New System.Drawing.Size(45, 49)
         Me.btRoom4.TabIndex = 4
@@ -333,7 +331,7 @@ Partial Class FormMain
         'btRoom3
         '
         Me.btRoom3.Location = New System.Drawing.Point(101, 2)
-        Me.btRoom3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom3.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom3.Name = "btRoom3"
         Me.btRoom3.Size = New System.Drawing.Size(45, 49)
         Me.btRoom3.TabIndex = 3
@@ -343,7 +341,7 @@ Partial Class FormMain
         'btRoom2
         '
         Me.btRoom2.Location = New System.Drawing.Point(52, 2)
-        Me.btRoom2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom2.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom2.Name = "btRoom2"
         Me.btRoom2.Size = New System.Drawing.Size(45, 49)
         Me.btRoom2.TabIndex = 2
@@ -353,7 +351,7 @@ Partial Class FormMain
         'btRoom5
         '
         Me.btRoom5.Location = New System.Drawing.Point(200, 2)
-        Me.btRoom5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom5.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom5.Name = "btRoom5"
         Me.btRoom5.Size = New System.Drawing.Size(45, 49)
         Me.btRoom5.TabIndex = 1
@@ -363,12 +361,117 @@ Partial Class FormMain
         'btRoom1
         '
         Me.btRoom1.Location = New System.Drawing.Point(2, 2)
-        Me.btRoom1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btRoom1.Margin = New System.Windows.Forms.Padding(2)
         Me.btRoom1.Name = "btRoom1"
         Me.btRoom1.Size = New System.Drawing.Size(45, 49)
         Me.btRoom1.TabIndex = 0
         Me.btRoom1.Text = "Room 1"
         Me.btRoom1.UseVisualStyleBackColor = True
+        '
+        'btPayment
+        '
+        Me.btPayment.Location = New System.Drawing.Point(361, 400)
+        Me.btPayment.Name = "btPayment"
+        Me.btPayment.Size = New System.Drawing.Size(75, 23)
+        Me.btPayment.TabIndex = 3
+        Me.btPayment.Text = "Payment"
+        Me.btPayment.UseVisualStyleBackColor = True
+        '
+        'pnFnB
+        '
+        Me.pnFnB.Controls.Add(Me.cbPortion)
+        Me.pnFnB.Controls.Add(Me.tbFnBCode)
+        Me.pnFnB.Location = New System.Drawing.Point(202, 110)
+        Me.pnFnB.Name = "pnFnB"
+        Me.pnFnB.Size = New System.Drawing.Size(566, 284)
+        Me.pnFnB.TabIndex = 2
+        '
+        'cbPortion
+        '
+        Me.cbPortion.FormattingEnabled = True
+        Me.cbPortion.Location = New System.Drawing.Point(159, 18)
+        Me.cbPortion.Name = "cbPortion"
+        Me.cbPortion.Size = New System.Drawing.Size(121, 21)
+        Me.cbPortion.TabIndex = 1
+        '
+        'tbFnBCode
+        '
+        Me.tbFnBCode.Location = New System.Drawing.Point(286, 19)
+        Me.tbFnBCode.Name = "tbFnBCode"
+        Me.tbFnBCode.Size = New System.Drawing.Size(100, 20)
+        Me.tbFnBCode.TabIndex = 0
+        '
+        'pnRoomOrder
+        '
+        Me.pnRoomOrder.Controls.Add(Me.btOrderRoom)
+        Me.pnRoomOrder.Controls.Add(Me.cbAddTime)
+        Me.pnRoomOrder.Controls.Add(Me.lbAddTime)
+        Me.pnRoomOrder.Controls.Add(Me.tbCustomerName)
+        Me.pnRoomOrder.Controls.Add(Me.lbCustomerName)
+        Me.pnRoomOrder.Location = New System.Drawing.Point(4, 110)
+        Me.pnRoomOrder.Name = "pnRoomOrder"
+        Me.pnRoomOrder.Size = New System.Drawing.Size(199, 284)
+        Me.pnRoomOrder.TabIndex = 1
+        '
+        'btOrderRoom
+        '
+        Me.btOrderRoom.Location = New System.Drawing.Point(64, 233)
+        Me.btOrderRoom.Name = "btOrderRoom"
+        Me.btOrderRoom.Size = New System.Drawing.Size(75, 23)
+        Me.btOrderRoom.TabIndex = 4
+        Me.btOrderRoom.Text = "Order Room"
+        Me.btOrderRoom.UseVisualStyleBackColor = True
+        '
+        'cbAddTime
+        '
+        Me.cbAddTime.FormattingEnabled = True
+        Me.cbAddTime.Location = New System.Drawing.Point(38, 114)
+        Me.cbAddTime.Name = "cbAddTime"
+        Me.cbAddTime.Size = New System.Drawing.Size(121, 21)
+        Me.cbAddTime.TabIndex = 3
+        '
+        'lbAddTime
+        '
+        Me.lbAddTime.AutoSize = True
+        Me.lbAddTime.Location = New System.Drawing.Point(73, 89)
+        Me.lbAddTime.Name = "lbAddTime"
+        Me.lbAddTime.Size = New System.Drawing.Size(52, 13)
+        Me.lbAddTime.TabIndex = 2
+        Me.lbAddTime.Text = "Add Time"
+        '
+        'tbCustomerName
+        '
+        Me.tbCustomerName.Location = New System.Drawing.Point(49, 48)
+        Me.tbCustomerName.Name = "tbCustomerName"
+        Me.tbCustomerName.Size = New System.Drawing.Size(100, 20)
+        Me.tbCustomerName.TabIndex = 1
+        '
+        'lbCustomerName
+        '
+        Me.lbCustomerName.AutoSize = True
+        Me.lbCustomerName.Location = New System.Drawing.Point(57, 25)
+        Me.lbCustomerName.Name = "lbCustomerName"
+        Me.lbCustomerName.Size = New System.Drawing.Size(82, 13)
+        Me.lbCustomerName.TabIndex = 0
+        Me.lbCustomerName.Text = "Customer Name"
+        '
+        'pnTime
+        '
+        Me.pnTime.Controls.Add(Me.lbTimeLeft)
+        Me.pnTime.Location = New System.Drawing.Point(202, 0)
+        Me.pnTime.Name = "pnTime"
+        Me.pnTime.Size = New System.Drawing.Size(565, 112)
+        Me.pnTime.TabIndex = 0
+        '
+        'lbTimeLeft
+        '
+        Me.lbTimeLeft.AutoSize = True
+        Me.lbTimeLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
+        Me.lbTimeLeft.Location = New System.Drawing.Point(81, 38)
+        Me.lbTimeLeft.Name = "lbTimeLeft"
+        Me.lbTimeLeft.Size = New System.Drawing.Size(427, 39)
+        Me.lbTimeLeft.TabIndex = 0
+        Me.lbTimeLeft.Text = "56 Minutes, 6 Seconds Left"
         '
         'lbRoomPrice
         '
@@ -420,131 +523,6 @@ Partial Class FormMain
         Me.lbRoomCapacity.TabIndex = 3
         Me.lbRoomCapacity.Text = "Max 6 Persons"
         '
-        'pnTime
-        '
-        Me.pnTime.Controls.Add(Me.lbTimeLeft)
-        Me.pnTime.Location = New System.Drawing.Point(202, 0)
-        Me.pnTime.Name = "pnTime"
-        Me.pnTime.Size = New System.Drawing.Size(565, 112)
-        Me.pnTime.TabIndex = 0
-        '
-        'lbTimeLeft
-        '
-        Me.lbTimeLeft.AutoSize = True
-        Me.lbTimeLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
-        Me.lbTimeLeft.Location = New System.Drawing.Point(81, 38)
-        Me.lbTimeLeft.Name = "lbTimeLeft"
-        Me.lbTimeLeft.Size = New System.Drawing.Size(427, 39)
-        Me.lbTimeLeft.TabIndex = 0
-        Me.lbTimeLeft.Text = "56 Minutes, 6 Seconds Left"
-        '
-        'pnRoomOrder
-        '
-        Me.pnRoomOrder.Controls.Add(Me.btOrderRoom)
-        Me.pnRoomOrder.Controls.Add(Me.cbAddTime)
-        Me.pnRoomOrder.Controls.Add(Me.lbAddTime)
-        Me.pnRoomOrder.Controls.Add(Me.tbCustomerName)
-        Me.pnRoomOrder.Controls.Add(Me.lbCustomerName)
-        Me.pnRoomOrder.Location = New System.Drawing.Point(4, 110)
-        Me.pnRoomOrder.Name = "pnRoomOrder"
-        Me.pnRoomOrder.Size = New System.Drawing.Size(199, 284)
-        Me.pnRoomOrder.TabIndex = 1
-        '
-        'lbCustomerName
-        '
-        Me.lbCustomerName.AutoSize = True
-        Me.lbCustomerName.Location = New System.Drawing.Point(57, 25)
-        Me.lbCustomerName.Name = "lbCustomerName"
-        Me.lbCustomerName.Size = New System.Drawing.Size(82, 13)
-        Me.lbCustomerName.TabIndex = 0
-        Me.lbCustomerName.Text = "Customer Name"
-        '
-        'tbCustomerName
-        '
-        Me.tbCustomerName.Location = New System.Drawing.Point(49, 48)
-        Me.tbCustomerName.Name = "tbCustomerName"
-        Me.tbCustomerName.Size = New System.Drawing.Size(100, 20)
-        Me.tbCustomerName.TabIndex = 1
-        '
-        'lbAddTime
-        '
-        Me.lbAddTime.AutoSize = True
-        Me.lbAddTime.Location = New System.Drawing.Point(73, 89)
-        Me.lbAddTime.Name = "lbAddTime"
-        Me.lbAddTime.Size = New System.Drawing.Size(52, 13)
-        Me.lbAddTime.TabIndex = 2
-        Me.lbAddTime.Text = "Add Time"
-        '
-        'cbAddTime
-        '
-        Me.cbAddTime.FormattingEnabled = True
-        Me.cbAddTime.Location = New System.Drawing.Point(38, 114)
-        Me.cbAddTime.Name = "cbAddTime"
-        Me.cbAddTime.Size = New System.Drawing.Size(121, 21)
-        Me.cbAddTime.TabIndex = 3
-        '
-        'btOrderRoom
-        '
-        Me.btOrderRoom.Location = New System.Drawing.Point(64, 233)
-        Me.btOrderRoom.Name = "btOrderRoom"
-        Me.btOrderRoom.Size = New System.Drawing.Size(75, 23)
-        Me.btOrderRoom.TabIndex = 4
-        Me.btOrderRoom.Text = "Order Room"
-        Me.btOrderRoom.UseVisualStyleBackColor = True
-        '
-        'pnFnB
-        '
-        Me.pnFnB.Controls.Add(Me.Label2)
-        Me.pnFnB.Controls.Add(Me.Label1)
-        Me.pnFnB.Controls.Add(Me.cbPortion)
-        Me.pnFnB.Controls.Add(Me.tbFnBCode)
-        Me.pnFnB.Location = New System.Drawing.Point(202, 110)
-        Me.pnFnB.Name = "pnFnB"
-        Me.pnFnB.Size = New System.Drawing.Size(566, 284)
-        Me.pnFnB.TabIndex = 2
-        '
-        'tbFnBCode
-        '
-        Me.tbFnBCode.Location = New System.Drawing.Point(286, 19)
-        Me.tbFnBCode.Name = "tbFnBCode"
-        Me.tbFnBCode.Size = New System.Drawing.Size(100, 20)
-        Me.tbFnBCode.TabIndex = 0
-        '
-        'cbPortion
-        '
-        Me.cbPortion.FormattingEnabled = True
-        Me.cbPortion.Location = New System.Drawing.Point(159, 18)
-        Me.cbPortion.Name = "cbPortion"
-        Me.cbPortion.Size = New System.Drawing.Size(121, 21)
-        Me.cbPortion.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(26, 55)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(31, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Food"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(233, 55)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Beverage"
-        '
-        'btPayment
-        '
-        Me.btPayment.Location = New System.Drawing.Point(202, 402)
-        Me.btPayment.Name = "btPayment"
-        Me.btPayment.Size = New System.Drawing.Size(75, 23)
-        Me.btPayment.TabIndex = 3
-        Me.btPayment.Text = "Payment"
-        Me.btPayment.UseVisualStyleBackColor = True
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -554,7 +532,7 @@ Partial Class FormMain
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FormMain"
         Me.Text = "FormMain"
         Me.MenuStrip1.ResumeLayout(False)
@@ -563,14 +541,14 @@ Partial Class FormMain
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.pnRoomInfo.ResumeLayout(False)
-        Me.pnRoomInfo.PerformLayout()
-        Me.pnTime.ResumeLayout(False)
-        Me.pnTime.PerformLayout()
-        Me.pnRoomOrder.ResumeLayout(False)
-        Me.pnRoomOrder.PerformLayout()
         Me.pnFnB.ResumeLayout(False)
         Me.pnFnB.PerformLayout()
+        Me.pnRoomOrder.ResumeLayout(False)
+        Me.pnRoomOrder.PerformLayout()
+        Me.pnTime.ResumeLayout(False)
+        Me.pnTime.PerformLayout()
+        Me.pnRoomInfo.ResumeLayout(False)
+        Me.pnRoomInfo.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -619,8 +597,6 @@ Partial Class FormMain
     Friend WithEvents lbCustomerName As Label
     Friend WithEvents btPayment As Button
     Friend WithEvents pnFnB As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents cbPortion As ComboBox
     Friend WithEvents tbFnBCode As TextBox
 End Class
