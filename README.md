@@ -53,3 +53,19 @@ This is a Graphical User Interface class project made by three Duta Wacana Chris
 * lbRoomPrice
 * lbTime
 * lbRoomTotal
+
+##Database
+```
+CREATE TABLE `singsangsung`.`fnb` ( `fnb_id` VARCHAR(5) NOT NULL , `fnb_name` VARCHAR(32) NOT NULL , `fnb_price` INT NOT NULL , PRIMARY KEY (`fnb_id`)) ENGINE = InnoDB;
+```
+```
+CREATE TABLE `singsangsung`.`room_class` ( `class_id` VARCHAR(4) NOT NULL , `class_price` INT NOT NULL , PRIMARY KEY (`class_id`)) ENGINE = InnoDB;
+```
+```
+CREATE TABLE `singsangsung`.`transaction` ( `transaction_id` INT NOT NULL , `employee_id` VARCHAR(8) NOT NULL , `coupon_id` VARCHAR(16) NOT NULL , `transaction_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`transaction_id`)) ENGINE = InnoDB;
+```
+```
+CREATE TABLE `singsangsung`.`fnb_ol` ( `fnb_id` VARCHAR(5) NOT NULL , `transaction_id` INT NOT NULL , `num_of_items` INT NOT NULL , PRIMARY KEY (`transaction_id`)) ENGINE = InnoDB;
+```
+```CREATE TABLE `singsangsung`.`room` ( `room_id` VARCHAR(4) NOT NULL , `class_id` VARCHAR(4) NOT NULL , PRIMARY KEY (`room_id`, `class_id`)) ENGINE = InnoDB;
+```
