@@ -41,8 +41,13 @@ This is a Graphical User Interface class project made by three Duta Wacana Chris
 .* cbAddTime
 .* btOrderRoom
 * pnFnB
-.* cbPortion
+.* lbFnB
+.* tbPortion
 .* tbFnBCode
+.* btInsert
+.* lvFnB
+.* lbTotal
+.* lbTotalPrice
 * btPayment : Open payment confirmation form.
 
 ### FormPayment
