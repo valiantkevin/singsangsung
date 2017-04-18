@@ -52,7 +52,16 @@ Partial Class FormMain
         Me.btRoom1 = New System.Windows.Forms.Button()
         Me.btPayment = New System.Windows.Forms.Button()
         Me.pnFnB = New System.Windows.Forms.Panel()
-        Me.cbPortion = New System.Windows.Forms.ComboBox()
+        Me.lbTotalPrice = New System.Windows.Forms.Label()
+        Me.lbTotal = New System.Windows.Forms.Label()
+        Me.btInsert = New System.Windows.Forms.Button()
+        Me.lvFnB = New System.Windows.Forms.ListView()
+        Me.chPortion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.chCode = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.chName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.chPrice = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.tbPortion = New System.Windows.Forms.TextBox()
+        Me.lbFnB = New System.Windows.Forms.Label()
         Me.tbFnBCode = New System.Windows.Forms.TextBox()
         Me.pnRoomOrder = New System.Windows.Forms.Panel()
         Me.btOrderRoom = New System.Windows.Forms.Button()
@@ -379,27 +388,102 @@ Partial Class FormMain
         '
         'pnFnB
         '
-        Me.pnFnB.Controls.Add(Me.cbPortion)
+        Me.pnFnB.Controls.Add(Me.lbTotalPrice)
+        Me.pnFnB.Controls.Add(Me.lbTotal)
+        Me.pnFnB.Controls.Add(Me.btInsert)
+        Me.pnFnB.Controls.Add(Me.lvFnB)
+        Me.pnFnB.Controls.Add(Me.tbPortion)
+        Me.pnFnB.Controls.Add(Me.lbFnB)
         Me.pnFnB.Controls.Add(Me.tbFnBCode)
         Me.pnFnB.Location = New System.Drawing.Point(202, 110)
         Me.pnFnB.Name = "pnFnB"
         Me.pnFnB.Size = New System.Drawing.Size(566, 284)
         Me.pnFnB.TabIndex = 2
         '
-        'cbPortion
+        'lbTotalPrice
         '
-        Me.cbPortion.FormattingEnabled = True
-        Me.cbPortion.Location = New System.Drawing.Point(159, 18)
-        Me.cbPortion.Name = "cbPortion"
-        Me.cbPortion.Size = New System.Drawing.Size(121, 21)
-        Me.cbPortion.TabIndex = 1
+        Me.lbTotalPrice.AutoSize = True
+        Me.lbTotalPrice.Location = New System.Drawing.Point(400, 256)
+        Me.lbTotalPrice.Name = "lbTotalPrice"
+        Me.lbTotalPrice.Size = New System.Drawing.Size(22, 13)
+        Me.lbTotalPrice.TabIndex = 9
+        Me.lbTotalPrice.Text = "....."
+        '
+        'lbTotal
+        '
+        Me.lbTotal.AutoSize = True
+        Me.lbTotal.Location = New System.Drawing.Point(346, 256)
+        Me.lbTotal.Name = "lbTotal"
+        Me.lbTotal.Size = New System.Drawing.Size(42, 13)
+        Me.lbTotal.TabIndex = 8
+        Me.lbTotal.Text = "TOTAL"
+        '
+        'btInsert
+        '
+        Me.btInsert.Location = New System.Drawing.Point(392, 32)
+        Me.btInsert.Name = "btInsert"
+        Me.btInsert.Size = New System.Drawing.Size(75, 23)
+        Me.btInsert.TabIndex = 7
+        Me.btInsert.Text = "Insert"
+        Me.btInsert.UseVisualStyleBackColor = True
+        '
+        'lvFnB
+        '
+        Me.lvFnB.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.chPortion, Me.chCode, Me.chName, Me.chPrice})
+        Me.lvFnB.GridLines = True
+        Me.lvFnB.Location = New System.Drawing.Point(18, 68)
+        Me.lvFnB.Name = "lvFnB"
+        Me.lvFnB.Size = New System.Drawing.Size(536, 175)
+        Me.lvFnB.TabIndex = 6
+        Me.lvFnB.UseCompatibleStateImageBehavior = False
+        Me.lvFnB.View = System.Windows.Forms.View.Details
+        '
+        'chPortion
+        '
+        Me.chPortion.Text = "Portion"
+        Me.chPortion.Width = 70
+        '
+        'chCode
+        '
+        Me.chCode.Text = "Code"
+        Me.chCode.Width = 102
+        '
+        'chName
+        '
+        Me.chName.Text = "Name"
+        Me.chName.Width = 200
+        '
+        'chPrice
+        '
+        Me.chPrice.Text = "Price"
+        Me.chPrice.Width = 144
+        '
+        'tbPortion
+        '
+        Me.tbPortion.ForeColor = System.Drawing.SystemColors.WindowFrame
+        Me.tbPortion.Location = New System.Drawing.Point(176, 32)
+        Me.tbPortion.Name = "tbPortion"
+        Me.tbPortion.Size = New System.Drawing.Size(100, 20)
+        Me.tbPortion.TabIndex = 5
+        Me.tbPortion.Text = "Portion"
+        '
+        'lbFnB
+        '
+        Me.lbFnB.AutoSize = True
+        Me.lbFnB.Location = New System.Drawing.Point(231, 11)
+        Me.lbFnB.Name = "lbFnB"
+        Me.lbFnB.Size = New System.Drawing.Size(101, 13)
+        Me.lbFnB.TabIndex = 4
+        Me.lbFnB.Text = "Food and Beverage"
         '
         'tbFnBCode
         '
-        Me.tbFnBCode.Location = New System.Drawing.Point(286, 19)
+        Me.tbFnBCode.ForeColor = System.Drawing.SystemColors.WindowFrame
+        Me.tbFnBCode.Location = New System.Drawing.Point(286, 32)
         Me.tbFnBCode.Name = "tbFnBCode"
         Me.tbFnBCode.Size = New System.Drawing.Size(100, 20)
         Me.tbFnBCode.TabIndex = 0
+        Me.tbFnBCode.Text = "Code"
         '
         'pnRoomOrder
         '
@@ -425,6 +509,7 @@ Partial Class FormMain
         'cbAddTime
         '
         Me.cbAddTime.FormattingEnabled = True
+        Me.cbAddTime.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
         Me.cbAddTime.Location = New System.Drawing.Point(38, 114)
         Me.cbAddTime.Name = "cbAddTime"
         Me.cbAddTime.Size = New System.Drawing.Size(121, 21)
@@ -441,9 +526,9 @@ Partial Class FormMain
         '
         'tbCustomerName
         '
-        Me.tbCustomerName.Location = New System.Drawing.Point(49, 48)
+        Me.tbCustomerName.Location = New System.Drawing.Point(38, 48)
         Me.tbCustomerName.Name = "tbCustomerName"
-        Me.tbCustomerName.Size = New System.Drawing.Size(100, 20)
+        Me.tbCustomerName.Size = New System.Drawing.Size(121, 20)
         Me.tbCustomerName.TabIndex = 1
         '
         'lbCustomerName
@@ -496,7 +581,8 @@ Partial Class FormMain
         'lbRoomNumber
         '
         Me.lbRoomNumber.AutoSize = True
-        Me.lbRoomNumber.Location = New System.Drawing.Point(80, 20)
+        Me.lbRoomNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbRoomNumber.Location = New System.Drawing.Point(77, 12)
         Me.lbRoomNumber.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbRoomNumber.Name = "lbRoomNumber"
         Me.lbRoomNumber.Size = New System.Drawing.Size(44, 13)
@@ -597,6 +683,15 @@ Partial Class FormMain
     Friend WithEvents lbCustomerName As Label
     Friend WithEvents btPayment As Button
     Friend WithEvents pnFnB As Panel
-    Friend WithEvents cbPortion As ComboBox
     Friend WithEvents tbFnBCode As TextBox
+    Friend WithEvents lbTotalPrice As Label
+    Friend WithEvents lbTotal As Label
+    Friend WithEvents btInsert As Button
+    Friend WithEvents lvFnB As ListView
+    Friend WithEvents chPortion As ColumnHeader
+    Friend WithEvents chCode As ColumnHeader
+    Friend WithEvents chName As ColumnHeader
+    Friend WithEvents chPrice As ColumnHeader
+    Friend WithEvents tbPortion As TextBox
+    Friend WithEvents lbFnB As Label
 End Class
