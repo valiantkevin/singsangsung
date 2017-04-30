@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.String
 Public Class FormMain
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim query As String = "SELECT * FROM room"
@@ -67,10 +68,17 @@ Public Class FormMain
             MsgBox("You're Not")
         End If
     End Sub
-
     Private Sub ChangePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangePasswordToolStripMenuItem.Click
         Dim form As New FormChangePass()
         Me.Hide()
         form.Show()
+    End Sub
+    Private Sub btOrderRoom_Click(sender As Object, e As EventArgs) Handles btOrderRoom.Click
+        Dim roomNumber As String = lbRoomNumber.Text.Substring(5)
+        If IsNullOrWhiteSpace(tbCustomerName.Text) Then
+            MsgBox("Customer Name can't be empty")
+        Else
+
+        End If
     End Sub
 End Class

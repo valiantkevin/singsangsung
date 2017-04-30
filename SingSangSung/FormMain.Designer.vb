@@ -106,7 +106,7 @@ Partial Class FormMain
         'ReportToolStripMenuItem
         '
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(137, 26)
         Me.ReportToolStripMenuItem.Text = "Report"
         '
         'SettingsToolStripMenuItem

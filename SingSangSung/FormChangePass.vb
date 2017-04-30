@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports System.IO
 Imports System.String
 Public Class FormChangePass
     Dim oldPassword As String
@@ -9,7 +8,7 @@ Public Class FormChangePass
         Me.Hide()
     End Sub
     Private Sub btSave_Click(sender As Object, e As EventArgs) Handles btSave.Click
-        If IsNullOrEmpty(tbOld.Text) Or IsNullOrEmpty(tbNew1.Text) Or IsNullOrEmpty(tbNew2.Text) Then
+        If IsNullOrWhiteSpace(tbOld.Text) Or IsNullOrWhiteSpace(tbNew1.Text) Or IsNullOrWhiteSpace(tbNew2.Text) Then
             MsgBox("Password can't be empty")
         Else
             If Not oldPassword.Equals(tbOld.Text) Then
