@@ -74,7 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBModule.vb" />
-    <Compile Include="FileModule.vb" />
     <Compile Include="FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
