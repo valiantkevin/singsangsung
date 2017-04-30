@@ -43,6 +43,7 @@ Partial Class frLogin
         Me.tbPassword.Location = New System.Drawing.Point(293, 123)
         Me.tbPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.tbPassword.Name = "tbPassword"
+        Me.tbPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tbPassword.Size = New System.Drawing.Size(100, 22)
         Me.tbPassword.TabIndex = 1
         '
@@ -76,6 +77,7 @@ Partial Class frLogin
         '
         'btExit
         '
+        Me.btExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btExit.Location = New System.Drawing.Point(317, 222)
         Me.btExit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btExit.Name = "btExit"
@@ -86,8 +88,10 @@ Partial Class frLogin
         '
         'frLogin
         '
+        Me.AcceptButton = Me.btLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btExit
         Me.ClientSize = New System.Drawing.Size(547, 293)
         Me.Controls.Add(Me.btExit)
         Me.Controls.Add(Me.btLogin)

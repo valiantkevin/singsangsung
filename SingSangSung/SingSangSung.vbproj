@@ -74,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBModule.vb" />
+    <Compile Include="FormChangePass.Designer.vb">
+      <DependentUpon>FormChangePass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangePass.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormChangePass.resx">
+      <DependentUpon>FormChangePass.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
     </EmbeddedResource>

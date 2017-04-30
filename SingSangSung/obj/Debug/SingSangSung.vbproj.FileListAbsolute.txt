@@ -15,3 +15,4 @@ D:\UKDW\SMT 4\GUI\PROJECT\singsangsung-master_2\singsangsung-master\SingSangSung
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\MySql.Data.dll
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\MySql.Data.xml
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormPayment.resources
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormChangePass.resources

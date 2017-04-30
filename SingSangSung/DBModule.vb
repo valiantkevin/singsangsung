@@ -6,5 +6,6 @@ Module DBModule
     Public myDataAdapter As MySqlDataAdapter
     'List of Global Variables
     Public employeeName As String
+    Public isAdmin As Boolean
     Public numberOfRoom As Integer
 End Module

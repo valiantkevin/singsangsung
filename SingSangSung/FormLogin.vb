@@ -1,8 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports System.IO
 Public Class frLogin
     Private Sub btLogin_Click(sender As Object, e As EventArgs) Handles btLogin.Click
-        Dim query As String = "SELECT employee_id, employee_password FROM employee where employee_id='" & tbUsername.Text & "' AND employee_password='" & tbPassword.Text & "'"
+        Dim query As String = "SELECT * FROM employee where employee_id='" & tbUsername.Text & "' AND employee_password='" & tbPassword.Text & "'"
         If myConn.State = ConnectionState.Closed Then
             myConn.Open()
         End If
@@ -13,8 +12,10 @@ Public Class frLogin
         End If
         myDataReader = myCommand.ExecuteReader
         If myDataReader.HasRows Then
-            myDataReader.Close()
+            myDataReader.Read()
             employeeName = tbUsername.Text
+            isAdmin = myDataReader("is_admin")
+            myDataReader.Close()
             FormMain.Show()
             Me.Hide()
         Else
@@ -22,11 +23,6 @@ Public Class frLogin
         End If
         If myDataReader.IsClosed = False Then
             myDataReader.Close()
-        End If
-    End Sub
-    Private Sub Login_KeyDown(sender As System.Object, e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
-        If e.KeyCode = Keys.Return Then
-            btLogin.PerformClick()
         End If
     End Sub
     Private Sub btExit_Click(sender As System.Object, e As System.EventArgs) Handles btExit.Click

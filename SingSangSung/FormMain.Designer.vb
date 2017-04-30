@@ -106,7 +106,7 @@ Partial Class FormMain
         'ReportToolStripMenuItem
         '
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(137, 26)
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.ReportToolStripMenuItem.Text = "Report"
         '
         'SettingsToolStripMenuItem
@@ -274,8 +274,10 @@ Partial Class FormMain
         '
         'cbAddTime
         '
+        Me.cbAddTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbAddTime.FormattingEnabled = True
-        Me.cbAddTime.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
+        Me.cbAddTime.ImeMode = System.Windows.Forms.ImeMode.[On]
+        Me.cbAddTime.Items.AddRange(New Object() {"1 Hour ", "2 Hours", "3 Hours", "4 Hours", "5 Hours", "6 Hours", "7 Hours", "8 Hours", "9 Hours", "10 Hours", "11 Hours", "12 Hours"})
         Me.cbAddTime.Location = New System.Drawing.Point(51, 140)
         Me.cbAddTime.Margin = New System.Windows.Forms.Padding(4)
         Me.cbAddTime.Name = "cbAddTime"

@@ -60,4 +60,17 @@ Public Class FormMain
             myDataReader.Close()
         End If
     End Sub
+    Private Sub ReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportToolStripMenuItem.Click
+        If isAdmin Then
+            MsgBox("You're Authorized")
+        Else
+            MsgBox("You're Not")
+        End If
+    End Sub
+
+    Private Sub ChangePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangePasswordToolStripMenuItem.Click
+        Dim form As New FormChangePass()
+        Me.Hide()
+        form.Show()
+    End Sub
 End Class

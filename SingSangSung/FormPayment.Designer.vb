@@ -31,48 +31,53 @@ Partial Class FormPayment
         'lbPaymentID
         '
         Me.lbPaymentID.AutoSize = True
-        Me.lbPaymentID.Location = New System.Drawing.Point(189, 9)
+        Me.lbPaymentID.Location = New System.Drawing.Point(252, 11)
+        Me.lbPaymentID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbPaymentID.Name = "lbPaymentID"
-        Me.lbPaymentID.Size = New System.Drawing.Size(82, 13)
+        Me.lbPaymentID.Size = New System.Drawing.Size(107, 17)
         Me.lbPaymentID.TabIndex = 0
         Me.lbPaymentID.Text = "Payment #1234"
         '
         'lbCustomer
         '
         Me.lbCustomer.AutoSize = True
-        Me.lbCustomer.Location = New System.Drawing.Point(189, 46)
+        Me.lbCustomer.Location = New System.Drawing.Point(252, 57)
+        Me.lbCustomer.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbCustomer.Name = "lbCustomer"
-        Me.lbCustomer.Size = New System.Drawing.Size(85, 13)
+        Me.lbCustomer.Size = New System.Drawing.Size(114, 17)
         Me.lbCustomer.TabIndex = 1
         Me.lbCustomer.Text = "Customer : Gaby"
         '
         'lbRoomNumber
         '
         Me.lbRoomNumber.AutoSize = True
-        Me.lbRoomNumber.Location = New System.Drawing.Point(209, 65)
+        Me.lbRoomNumber.Location = New System.Drawing.Point(279, 80)
+        Me.lbRoomNumber.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbRoomNumber.Name = "lbRoomNumber"
-        Me.lbRoomNumber.Size = New System.Drawing.Size(44, 13)
+        Me.lbRoomNumber.Size = New System.Drawing.Size(57, 17)
         Me.lbRoomNumber.TabIndex = 2
         Me.lbRoomNumber.Text = "Room 1"
         '
         'lbRoomClass
         '
         Me.lbRoomClass.AutoSize = True
-        Me.lbRoomClass.Location = New System.Drawing.Point(218, 85)
+        Me.lbRoomClass.Location = New System.Drawing.Point(291, 105)
+        Me.lbRoomClass.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbRoomClass.Name = "lbRoomClass"
-        Me.lbRoomClass.Size = New System.Drawing.Size(24, 13)
+        Me.lbRoomClass.Size = New System.Drawing.Size(29, 17)
         Me.lbRoomClass.TabIndex = 3
         Me.lbRoomClass.Text = "VIP"
         '
         'FormPayment
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(482, 274)
+        Me.ClientSize = New System.Drawing.Size(643, 337)
         Me.Controls.Add(Me.lbRoomClass)
         Me.Controls.Add(Me.lbRoomNumber)
         Me.Controls.Add(Me.lbCustomer)
         Me.Controls.Add(Me.lbPaymentID)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FormPayment"
         Me.Text = "FormPayment"
         Me.ResumeLayout(False)
