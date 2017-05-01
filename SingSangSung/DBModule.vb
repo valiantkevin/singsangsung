@@ -8,4 +8,5 @@ Module DBModule
     Public employeeName As String
     Public isAdmin As Boolean
     Public numberOfRoom As Integer
+    Dim roomList As Dictionary(Of Integer, Integer)
 End Module

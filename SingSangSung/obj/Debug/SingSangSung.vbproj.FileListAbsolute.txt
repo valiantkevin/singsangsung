@@ -16,3 +16,5 @@ C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSan
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\MySql.Data.xml
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormPayment.resources
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormChangePass.resources
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormAddRoom.resources
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormAddMenu.resources

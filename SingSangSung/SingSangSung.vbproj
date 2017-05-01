@@ -74,6 +74,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBModule.vb" />
+    <Compile Include="FormAddMenu.Designer.vb">
+      <DependentUpon>FormAddMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddRoom.Designer.vb">
+      <DependentUpon>FormAddRoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddRoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormChangePass.Designer.vb">
       <DependentUpon>FormChangePass.vb</DependentUpon>
     </Compile>
@@ -116,6 +128,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAddMenu.resx">
+      <DependentUpon>FormAddMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddRoom.resx">
+      <DependentUpon>FormAddRoom.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChangePass.resx">
       <DependentUpon>FormChangePass.vb</DependentUpon>
     </EmbeddedResource>
