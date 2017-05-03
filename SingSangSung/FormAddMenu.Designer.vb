@@ -95,7 +95,7 @@ Partial Class FormAddMenu
         Me.btCancel.Name = "btCancel"
         Me.btCancel.Size = New System.Drawing.Size(75, 23)
         Me.btCancel.TabIndex = 7
-        Me.btCancel.Text = "Cancel"
+        Me.btCancel.Text = "Finish"
         Me.btCancel.UseVisualStyleBackColor = True
         '
         'FormAddMenu
