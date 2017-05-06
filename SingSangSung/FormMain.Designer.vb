@@ -108,14 +108,14 @@ Partial Class FormMain
         'ReportToolStripMenuItem
         '
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(137, 26)
         Me.ReportToolStripMenuItem.Text = "Report"
         '
         'SettingsToolStripMenuItem
         '
         Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewRoomToolStripMenuItem, Me.AddNewMenuToolStripMenuItem})
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(137, 26)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'AddNewRoomToolStripMenuItem

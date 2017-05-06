@@ -189,7 +189,13 @@ Public Class FormMain
     End Sub
 
     Private Sub btInsert_Click(sender As Object, e As EventArgs) Handles btInsert.Click
+        If IsNullOrWhiteSpace(tbFnBCode.Text) Or IsNullOrWhiteSpace(tbPortion.Text) Or (Equals(tbFnBCode.Text, "Code")) Or (Equals(tbPortion.Text, "Portion")) Then
+            MsgBox("Code or Portion cannot be empty")
+        ElseIf (CInt(tbPortion.Text) < 1) Then
+            MsgBox("Portion cannot be less than one")
+        Else
 
+        End If
     End Sub
 
     Private Sub refreshStatus()
@@ -228,6 +234,30 @@ Public Class FormMain
         End If
         If Not myDataReader.IsClosed Then
             myDataReader.Close()
+        End If
+    End Sub
+
+    Private Sub tbPortion_GotFocus(sender As Object, e As EventArgs) Handles tbPortion.GotFocus
+        If (Equals("Portion", tbPortion.Text)) Then
+            tbPortion.Text = ""
+        End If
+    End Sub
+
+    Private Sub tbFnBCode_GotFocus(sender As Object, e As EventArgs) Handles tbFnBCode.GotFocus
+        If (Equals("Code", tbFnBCode.Text)) Then
+            tbFnBCode.Text = ""
+        End If
+    End Sub
+
+    Private Sub tbPortion_LostFocus(sender As Object, e As EventArgs) Handles tbPortion.LostFocus
+        If (Equals("", tbPortion.Text)) Then
+            tbPortion.Text = "Portion"
+        End If
+    End Sub
+
+    Private Sub tbFnBCode_LostFocus(sender As Object, e As EventArgs) Handles tbFnBCode.LostFocus
+        If (Equals("", tbFnBCode.Text)) Then
+            tbFnBCode.Text = "Code"
         End If
     End Sub
 End Class
