@@ -189,12 +189,46 @@ Public Class FormMain
     End Sub
 
     Private Sub btInsert_Click(sender As Object, e As EventArgs) Handles btInsert.Click
-        If IsNullOrWhiteSpace(tbFnBCode.Text) Or IsNullOrWhiteSpace(tbPortion.Text) Or (Equals(tbFnBCode.Text, "Code")) Or (Equals(tbPortion.Text, "Portion")) Then
-            MsgBox("Code or Portion cannot be empty")
-        ElseIf (CInt(tbPortion.Text) < 1) Then
-            MsgBox("Portion cannot be less than one")
+        If Not tbCustomerName.Enabled Then
+            If IsNullOrWhiteSpace(tbFnBCode.Text) Or IsNullOrWhiteSpace(tbPortion.Text) Or (Equals(tbFnBCode.Text, "Code")) Or (Equals(tbPortion.Text, "Portion")) Then
+                MsgBox("Code or Portion cannot be empty")
+            ElseIf (CInt(tbPortion.Text) < 1) Then
+                MsgBox("Portion cannot be less than one")
+            Else
+                Dim query As String = "SELECT * FROM fnb WHERE fnb_id='" & tbFnBCode.Text & "'"
+                If myConn.State = ConnectionState.Closed Then
+                    myConn.Open()
+                End If
+                If myCommand Is Nothing Then
+                    myCommand = New MySqlCommand(query, myConn)
+                Else
+                    myCommand.CommandText = query
+                End If
+                myDataReader = myCommand.ExecuteReader
+                If myDataReader.HasRows Then
+                    myDataReader.Close()
+                    Dim transactionNumber As Integer
+                    roomList.TryGetValue(lbRoomNumber.Text.Substring(5), transactionNumber)
+                    query = "INSERT INTO fnb_ol VALUES('" & tbFnBCode.Text & "'," & transactionNumber & "," & tbPortion.Text & ")"
+                    If myConn.State = ConnectionState.Closed Then
+                        myConn.Open()
+                    End If
+                    If myCommand Is Nothing Then
+                        myCommand = New MySqlCommand(query, myConn)
+                    Else
+                        myCommand.CommandText = query
+                    End If
+                    myCommand.ExecuteNonQuery()
+                    MsgBox("Menu order success")
+                    tbPortion.Text = "Portion"
+                    tbFnBCode.Text = "Code"
+                Else
+                    MsgBox("The code is not on the menu")
+                    myDataReader.Close()
+                End If
+            End If
         Else
-
+            MsgBox("Room is not occupied")
         End If
     End Sub
 
@@ -235,6 +269,10 @@ Public Class FormMain
         If Not myDataReader.IsClosed Then
             myDataReader.Close()
         End If
+    End Sub
+
+    Private Sub refreshList()
+        lvFnB.Clear()
     End Sub
 
     Private Sub tbPortion_GotFocus(sender As Object, e As EventArgs) Handles tbPortion.GotFocus

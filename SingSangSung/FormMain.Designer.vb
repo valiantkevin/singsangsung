@@ -41,7 +41,7 @@ Partial Class FormMain
         Me.chPortion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chCode = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.chPrice = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.chPricePerPortion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.tbPortion = New System.Windows.Forms.TextBox()
         Me.lbFnB = New System.Windows.Forms.Label()
         Me.tbFnBCode = New System.Windows.Forms.TextBox()
@@ -58,6 +58,7 @@ Partial Class FormMain
         Me.lbRoomNumber = New System.Windows.Forms.Label()
         Me.pnRoomInfo = New System.Windows.Forms.Panel()
         Me.lbRoomCapacity = New System.Windows.Forms.Label()
+        Me.chPriceTotal = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -204,7 +205,7 @@ Partial Class FormMain
         '
         'lvFnB
         '
-        Me.lvFnB.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.chPortion, Me.chCode, Me.chName, Me.chPrice})
+        Me.lvFnB.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.chPortion, Me.chCode, Me.chName, Me.chPricePerPortion, Me.chPriceTotal})
         Me.lvFnB.GridLines = True
         Me.lvFnB.Location = New System.Drawing.Point(24, 84)
         Me.lvFnB.Margin = New System.Windows.Forms.Padding(4)
@@ -229,10 +230,10 @@ Partial Class FormMain
         Me.chName.Text = "Name"
         Me.chName.Width = 200
         '
-        'chPrice
+        'chPricePerPortion
         '
-        Me.chPrice.Text = "Price"
-        Me.chPrice.Width = 144
+        Me.chPricePerPortion.Text = "Price Per Portion"
+        Me.chPricePerPortion.Width = 144
         '
         'tbPortion
         '
@@ -397,6 +398,11 @@ Partial Class FormMain
         Me.lbRoomCapacity.TabIndex = 3
         Me.lbRoomCapacity.Text = "Max 6 Persons"
         '
+        'chPriceTotal
+        '
+        Me.chPriceTotal.Text = "Total Price"
+        Me.chPriceTotal.Width = 114
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -458,9 +464,10 @@ Partial Class FormMain
     Friend WithEvents chPortion As ColumnHeader
     Friend WithEvents chCode As ColumnHeader
     Friend WithEvents chName As ColumnHeader
-    Friend WithEvents chPrice As ColumnHeader
+    Friend WithEvents chPricePerPortion As ColumnHeader
     Friend WithEvents tbPortion As TextBox
     Friend WithEvents lbFnB As Label
     Friend WithEvents AddNewRoomToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AddNewMenuToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents chPriceTotal As ColumnHeader
 End Class
