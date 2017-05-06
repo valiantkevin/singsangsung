@@ -8,6 +8,6 @@ Module DBModule
     Public employeeName As String
     Public isAdmin As Boolean
     Public numberOfRoom As Integer
-    Public roomList As Dictionary(Of Integer, Integer)
+    Public roomList As Dictionary(Of Integer, Integer) = New Dictionary(Of Integer, Integer)
     Public transactionUnpaid As Queue(Of Integer) = New Queue(Of Integer)
 End Module

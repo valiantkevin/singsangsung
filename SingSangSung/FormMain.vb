@@ -2,7 +2,6 @@
 Imports System.String
 Public Class FormMain
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        roomList = New Dictionary(Of Integer, Integer)
         Dim query As String = "SELECT * FROM room"
         If myConn.State = ConnectionState.Closed Then
             myConn.Open()
@@ -30,40 +29,7 @@ Public Class FormMain
         If myDataReader.IsClosed = False Then
             myDataReader.Close()
         End If
-        query = "SELECT * FROM transaction WHERE isPaid=0"
-        If myConn.State = ConnectionState.Closed Then
-            myConn.Open()
-        End If
-        If myCommand Is Nothing Then
-            myCommand = New MySqlCommand(query, myConn)
-        Else
-            myCommand.CommandText = query
-        End If
-        myDataReader = myCommand.ExecuteReader
-        If myDataReader.HasRows Then
-            While myDataReader.Read()
-                transactionUnpaid.Enqueue(myDataReader("transaction_id"))
-            End While
-            myDataReader.Close()
-            For Each a As Integer In transactionUnpaid
-                query = "SELECT * FROM room_ol WHERE transaction_id=" & a
-                If myConn.State = ConnectionState.Closed Then
-                    myConn.Open()
-                End If
-                If myCommand Is Nothing Then
-                    myCommand = New MySqlCommand(query, myConn)
-                Else
-                    myCommand.CommandText = query
-                End If
-                myDataReader = myCommand.ExecuteReader
-                myDataReader.Read()
-                roomList.Add(myDataReader("room_id"), myDataReader("transaction_id"))
-                myDataReader.Close()
-            Next
-        End If
-        If Not myDataReader.IsClosed Then
-            myDataReader.Close()
-        End If
+        refreshStatus()
     End Sub
     Private Sub btRoom_Click(sender As Object, e As EventArgs)
         Dim room As Button = DirectCast(sender, Button)
@@ -207,6 +173,7 @@ Public Class FormMain
                 cbAddTime.SelectedIndex = -1
             End If
         End If
+        refreshStatus()
     End Sub
 
     Private Sub AddNewRoomToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewRoomToolStripMenuItem.Click
@@ -219,5 +186,48 @@ Public Class FormMain
         Dim form As New FormAddMenu
         form.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub btInsert_Click(sender As Object, e As EventArgs) Handles btInsert.Click
+
+    End Sub
+
+    Private Sub refreshStatus()
+        roomList.Clear()
+        transactionUnpaid.Clear()
+        Dim query = "SELECT * FROM transaction WHERE isPaid=0"
+        If myConn.State = ConnectionState.Closed Then
+            myConn.Open()
+        End If
+        If myCommand Is Nothing Then
+            myCommand = New MySqlCommand(query, myConn)
+        Else
+            myCommand.CommandText = query
+        End If
+        myDataReader = myCommand.ExecuteReader
+        If myDataReader.HasRows Then
+            While myDataReader.Read()
+                transactionUnpaid.Enqueue(myDataReader("transaction_id"))
+            End While
+            myDataReader.Close()
+            For Each a As Integer In transactionUnpaid
+                query = "SELECT * FROM room_ol WHERE transaction_id=" & a
+                If myConn.State = ConnectionState.Closed Then
+                    myConn.Open()
+                End If
+                If myCommand Is Nothing Then
+                    myCommand = New MySqlCommand(query, myConn)
+                Else
+                    myCommand.CommandText = query
+                End If
+                myDataReader = myCommand.ExecuteReader
+                myDataReader.Read()
+                roomList.Add(myDataReader("room_id"), myDataReader("transaction_id"))
+                myDataReader.Close()
+            Next
+        End If
+        If Not myDataReader.IsClosed Then
+            myDataReader.Close()
+        End If
     End Sub
 End Class
