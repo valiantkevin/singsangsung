@@ -39,7 +39,6 @@ Partial Class FormMain
         Me.btInsert = New System.Windows.Forms.Button()
         Me.lvFnB = New System.Windows.Forms.ListView()
         Me.chPortion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.chCode = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chPricePerPortion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.tbPortion = New System.Windows.Forms.TextBox()
@@ -205,9 +204,9 @@ Partial Class FormMain
         '
         'lvFnB
         '
-        Me.lvFnB.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.chPortion, Me.chCode, Me.chName, Me.chPricePerPortion, Me.chPriceTotal})
+        Me.lvFnB.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.chName, Me.chPortion, Me.chPricePerPortion, Me.chPriceTotal})
         Me.lvFnB.GridLines = True
-        Me.lvFnB.Location = New System.Drawing.Point(24, 84)
+        Me.lvFnB.Location = New System.Drawing.Point(29, 75)
         Me.lvFnB.Margin = New System.Windows.Forms.Padding(4)
         Me.lvFnB.Name = "lvFnB"
         Me.lvFnB.Size = New System.Drawing.Size(713, 214)
@@ -218,17 +217,12 @@ Partial Class FormMain
         'chPortion
         '
         Me.chPortion.Text = "Portion"
-        Me.chPortion.Width = 70
-        '
-        'chCode
-        '
-        Me.chCode.Text = "Code"
-        Me.chCode.Width = 102
+        Me.chPortion.Width = 85
         '
         'chName
         '
         Me.chName.Text = "Name"
-        Me.chName.Width = 200
+        Me.chName.Width = 236
         '
         'chPricePerPortion
         '
@@ -462,7 +456,6 @@ Partial Class FormMain
     Friend WithEvents btInsert As Button
     Friend WithEvents lvFnB As ListView
     Friend WithEvents chPortion As ColumnHeader
-    Friend WithEvents chCode As ColumnHeader
     Friend WithEvents chName As ColumnHeader
     Friend WithEvents chPricePerPortion As ColumnHeader
     Friend WithEvents tbPortion As TextBox

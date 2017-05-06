@@ -2,6 +2,9 @@
 Imports System.String
 Public Class FormMain
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
         Dim query As String = "SELECT * FROM room"
         If myConn.State = ConnectionState.Closed Then
             myConn.Open()
@@ -32,6 +35,9 @@ Public Class FormMain
         refreshStatus()
     End Sub
     Private Sub btRoom_Click(sender As Object, e As EventArgs)
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
         Dim room As Button = DirectCast(sender, Button)
         Dim transactionNumber As Integer
         lbRoomNumber.Text = room.Text
@@ -83,6 +89,7 @@ Public Class FormMain
         If Not myDataReader.IsClosed Then
             myDataReader.Close()
         End If
+        refreshList()
     End Sub
     Private Sub ChangePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangePasswordToolStripMenuItem.Click
         Dim form As New FormChangePass()
@@ -90,6 +97,9 @@ Public Class FormMain
         form.Show()
     End Sub
     Private Sub btOrderRoom_Click(sender As Object, e As EventArgs) Handles btOrderRoom.Click
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
         Dim roomNumber As String = lbRoomNumber.Text.Substring(5)
         Dim transactionNumber As Integer
         Dim length As Integer
@@ -189,6 +199,9 @@ Public Class FormMain
     End Sub
 
     Private Sub btInsert_Click(sender As Object, e As EventArgs) Handles btInsert.Click
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
         If Not tbCustomerName.Enabled Then
             If IsNullOrWhiteSpace(tbFnBCode.Text) Or IsNullOrWhiteSpace(tbPortion.Text) Or (Equals(tbFnBCode.Text, "Code")) Or (Equals(tbPortion.Text, "Portion")) Then
                 MsgBox("Code or Portion cannot be empty")
@@ -226,6 +239,7 @@ Public Class FormMain
                     MsgBox("The code is not on the menu")
                     myDataReader.Close()
                 End If
+                refreshList()
             End If
         Else
             MsgBox("Room is not occupied")
@@ -233,6 +247,9 @@ Public Class FormMain
     End Sub
 
     Private Sub refreshStatus()
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
         roomList.Clear()
         transactionUnpaid.Clear()
         Dim query = "SELECT * FROM transaction WHERE isPaid=0"
@@ -272,7 +289,51 @@ Public Class FormMain
     End Sub
 
     Private Sub refreshList()
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
         lvFnB.Clear()
+        Dim transactionNumber As Integer
+        roomList.TryGetValue(lbRoomNumber.Text.Substring(5), transactionNumber)
+        Dim query = "SELECT * FROM fnb_ol WHERE transaction_id=" & transactionNumber
+        If myConn.State = ConnectionState.Closed Then
+            myConn.Open()
+        End If
+        If myCommand Is Nothing Then
+            myCommand = New MySqlCommand(query, myConn)
+        Else
+            myCommand.CommandText = query
+        End If
+        myDataReader = myCommand.ExecuteReader
+        If myDataReader.HasRows Then
+            Dim fnb_ol As Dictionary(Of String, Integer) = New Dictionary(Of String, Integer)
+            Dim i As Integer = 0
+            While myDataReader.Read()
+                fnb_ol.Add(myDataReader("fnb_id"), myDataReader("num_of_items"))
+            End While
+            myDataReader.Close()
+            For Each a As KeyValuePair(Of String, Integer) In fnb_ol
+                query = "SELECT * FROM fnb WHERE fnb_id='" & a.Key & "'"
+                If myConn.State = ConnectionState.Closed Then
+                    myConn.Open()
+                End If
+                If myCommand Is Nothing Then
+                    myCommand = New MySqlCommand(query, myConn)
+                Else
+                    myCommand.CommandText = query
+                End If
+                myDataReader = myCommand.ExecuteReader
+                myDataReader.Read()
+                lvFnB.Items(i).SubItems.Add(myDataReader("fnb_name"))
+                lvFnB.Items(i).SubItems.Add(a.Value)
+                lvFnB.Items(i).SubItems.Add(myDataReader("fnb_price"))
+                lvFnB.Items(i).SubItems.Add(myDataReader("fnb_price") * a.Value)
+                i = i + 1
+            Next
+            If Not myDataReader.IsClosed Then
+                myDataReader.Close()
+            End If
+        End If
     End Sub
 
     Private Sub tbPortion_GotFocus(sender As Object, e As EventArgs) Handles tbPortion.GotFocus
