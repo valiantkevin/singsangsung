@@ -38,9 +38,10 @@ Partial Class FormMain
         Me.lbTotal = New System.Windows.Forms.Label()
         Me.btInsert = New System.Windows.Forms.Button()
         Me.lvFnB = New System.Windows.Forms.ListView()
-        Me.chPortion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.chPortion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chPricePerPortion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.chPriceTotal = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.tbPortion = New System.Windows.Forms.TextBox()
         Me.lbFnB = New System.Windows.Forms.Label()
         Me.tbFnBCode = New System.Windows.Forms.TextBox()
@@ -57,7 +58,6 @@ Partial Class FormMain
         Me.lbRoomNumber = New System.Windows.Forms.Label()
         Me.pnRoomInfo = New System.Windows.Forms.Panel()
         Me.lbRoomCapacity = New System.Windows.Forms.Label()
-        Me.chPriceTotal = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -175,7 +175,7 @@ Partial Class FormMain
         'lbTotalPrice
         '
         Me.lbTotalPrice.AutoSize = True
-        Me.lbTotalPrice.Location = New System.Drawing.Point(533, 315)
+        Me.lbTotalPrice.Location = New System.Drawing.Point(633, 315)
         Me.lbTotalPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTotalPrice.Name = "lbTotalPrice"
         Me.lbTotalPrice.Size = New System.Drawing.Size(28, 17)
@@ -185,12 +185,12 @@ Partial Class FormMain
         'lbTotal
         '
         Me.lbTotal.AutoSize = True
-        Me.lbTotal.Location = New System.Drawing.Point(461, 315)
+        Me.lbTotal.Location = New System.Drawing.Point(436, 315)
         Me.lbTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTotal.Name = "lbTotal"
-        Me.lbTotal.Size = New System.Drawing.Size(54, 17)
+        Me.lbTotal.Size = New System.Drawing.Size(170, 17)
         Me.lbTotal.TabIndex = 8
-        Me.lbTotal.Text = "TOTAL"
+        Me.lbTotal.Text = "Food And Beverage Total"
         '
         'btInsert
         '
@@ -214,20 +214,25 @@ Partial Class FormMain
         Me.lvFnB.UseCompatibleStateImageBehavior = False
         Me.lvFnB.View = System.Windows.Forms.View.Details
         '
-        'chPortion
-        '
-        Me.chPortion.Text = "Portion"
-        Me.chPortion.Width = 85
-        '
         'chName
         '
         Me.chName.Text = "Name"
         Me.chName.Width = 236
         '
+        'chPortion
+        '
+        Me.chPortion.Text = "Portion"
+        Me.chPortion.Width = 85
+        '
         'chPricePerPortion
         '
         Me.chPricePerPortion.Text = "Price Per Portion"
         Me.chPricePerPortion.Width = 144
+        '
+        'chPriceTotal
+        '
+        Me.chPriceTotal.Text = "Total Price"
+        Me.chPriceTotal.Width = 114
         '
         'tbPortion
         '
@@ -391,11 +396,6 @@ Partial Class FormMain
         Me.lbRoomCapacity.Size = New System.Drawing.Size(101, 17)
         Me.lbRoomCapacity.TabIndex = 3
         Me.lbRoomCapacity.Text = "Max 6 Persons"
-        '
-        'chPriceTotal
-        '
-        Me.chPriceTotal.Text = "Total Price"
-        Me.chPriceTotal.Width = 114
         '
         'FormMain
         '

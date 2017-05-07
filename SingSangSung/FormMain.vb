@@ -292,8 +292,8 @@ Public Class FormMain
         If Not myDataReader.IsClosed() Then
             myDataReader.Close()
         End If
-        lvFnB.Clear()
         Dim transactionNumber As Integer
+        Dim total As Integer = 0
         roomList.TryGetValue(lbRoomNumber.Text.Substring(5), transactionNumber)
         Dim query = "SELECT * FROM fnb_ol WHERE transaction_id=" & transactionNumber
         If myConn.State = ConnectionState.Closed Then
@@ -305,9 +305,11 @@ Public Class FormMain
             myCommand.CommandText = query
         End If
         myDataReader = myCommand.ExecuteReader
+        lvFnB.Items.Clear()
+        lvFnB.View = View.Details
+        lvFnB.BeginUpdate()
         If myDataReader.HasRows Then
             Dim fnb_ol As Dictionary(Of String, Integer) = New Dictionary(Of String, Integer)
-            Dim i As Integer = 0
             While myDataReader.Read()
                 fnb_ol.Add(myDataReader("fnb_id"), myDataReader("num_of_items"))
             End While
@@ -324,16 +326,16 @@ Public Class FormMain
                 End If
                 myDataReader = myCommand.ExecuteReader
                 myDataReader.Read()
-                lvFnB.Items(i).SubItems.Add(myDataReader("fnb_name"))
-                lvFnB.Items(i).SubItems.Add(a.Value)
-                lvFnB.Items(i).SubItems.Add(myDataReader("fnb_price"))
-                lvFnB.Items(i).SubItems.Add(myDataReader("fnb_price") * a.Value)
-                i = i + 1
+                Dim item As ListViewItem = New ListViewItem(New String() {myDataReader("fnb_name"), a.Value, myDataReader("fnb_price"), myDataReader("fnb_price") * a.Value})
+                total = total + (myDataReader("fnb_price") * a.Value)
+                lvFnB.Items.Add(item)
             Next
             If Not myDataReader.IsClosed Then
                 myDataReader.Close()
             End If
         End If
+        lvFnB.EndUpdate()
+        lbTotalPrice.Text = total
     End Sub
 
     Private Sub tbPortion_GotFocus(sender As Object, e As EventArgs) Handles tbPortion.GotFocus
