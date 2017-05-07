@@ -198,6 +198,12 @@ Public Class FormMain
         Me.Hide()
     End Sub
 
+    Private Sub AddNewEmployeeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewEmployeeToolStripMenuItem.Click
+        Dim form As New FormNewEmployee
+        form.Show()
+        Me.Hide()
+    End Sub
+
     Private Sub btInsert_Click(sender As Object, e As EventArgs) Handles btInsert.Click
         If Not myDataReader.IsClosed() Then
             myDataReader.Close()
@@ -222,7 +228,7 @@ Public Class FormMain
                     myDataReader.Close()
                     Dim transactionNumber As Integer
                     roomList.TryGetValue(lbRoomNumber.Text.Substring(5), transactionNumber)
-                    query = "INSERT INTO fnb_ol VALUES('" & tbFnBCode.Text & "'," & transactionNumber & "," & tbPortion.Text & ")"
+                    query = "SELECT * FROM fnb_ol WHERE transaction_id=" & transactionNumber & " AND fnb_id='" & tbFnBCode.Text & "'"
                     If myConn.State = ConnectionState.Closed Then
                         myConn.Open()
                     End If
@@ -231,10 +237,41 @@ Public Class FormMain
                     Else
                         myCommand.CommandText = query
                     End If
-                    myCommand.ExecuteNonQuery()
-                    MsgBox("Menu order success")
-                    tbPortion.Text = "Portion"
-                    tbFnBCode.Text = "Code"
+                    myDataReader = myCommand.ExecuteReader
+                    If myDataReader.HasRows Then
+                        myDataReader.Read()
+                        Dim num_of_items As Integer = myDataReader("num_of_items")
+                        myDataReader.Close()
+                        query = "UPDATE fnb_ol SET num_of_items=" & num_of_items + tbPortion.Text & " WHERE transaction_id=" & transactionNumber & " AND fnb_id='" & tbFnBCode.Text & "'"
+                        If myConn.State = ConnectionState.Closed Then
+                            myConn.Open()
+                        End If
+                        If myCommand Is Nothing Then
+                            myCommand = New MySqlCommand(query, myConn)
+                        Else
+                            myCommand.CommandText = query
+                        End If
+                        myCommand.ExecuteNonQuery()
+                        myCommand.ExecuteNonQuery()
+                        MsgBox("Menu order success")
+                        tbPortion.Text = "Portion"
+                        tbFnBCode.Text = "Code"
+                    Else
+                        myDataReader.Close()
+                        query = "INSERT INTO fnb_ol VALUES('" & tbFnBCode.Text & "'," & transactionNumber & "," & tbPortion.Text & ")"
+                        If myConn.State = ConnectionState.Closed Then
+                            myConn.Open()
+                        End If
+                        If myCommand Is Nothing Then
+                            myCommand = New MySqlCommand(query, myConn)
+                        Else
+                            myCommand.CommandText = query
+                        End If
+                        myCommand.ExecuteNonQuery()
+                        MsgBox("Menu order success")
+                        tbPortion.Text = "Portion"
+                        tbFnBCode.Text = "Code"
+                    End If
                 Else
                     MsgBox("The code is not on the menu")
                     myDataReader.Close()
@@ -361,4 +398,5 @@ Public Class FormMain
             tbFnBCode.Text = "Code"
         End If
     End Sub
+
 End Class
