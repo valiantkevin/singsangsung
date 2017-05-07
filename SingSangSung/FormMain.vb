@@ -187,18 +187,27 @@ Public Class FormMain
     End Sub
 
     Private Sub AddNewRoomToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewRoomToolStripMenuItem.Click
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
         Dim form As New FormAddRoom
         form.Show()
         Me.Hide()
     End Sub
 
     Private Sub AddNewMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewMenuToolStripMenuItem.Click
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
         Dim form As New FormAddMenu
         form.Show()
         Me.Hide()
     End Sub
 
     Private Sub AddNewEmployeeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewEmployeeToolStripMenuItem.Click
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
         Dim form As New FormNewEmployee
         form.Show()
         Me.Hide()

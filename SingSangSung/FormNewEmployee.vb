@@ -17,7 +17,7 @@ Public Class FormNewEmployee
                 tbConfirmPassword.Text = ""
                 MsgBox("passwords don't match")
             Else
-                Dim query As String = "SELECT * FROM employee WHERE employee_id='" & tbUsername.Text
+                Dim query As String = "SELECT * FROM employee WHERE employee_id='" & tbUsername.Text & "'"
                 If myConn.State = ConnectionState.Closed Then
                     myConn.Open()
                 End If
@@ -48,6 +48,7 @@ Public Class FormNewEmployee
                         myCommand.CommandText = query
                     End If
                     myCommand.ExecuteNonQuery()
+                    MsgBox("New Employee Added")
                     tbUsername.Text = ""
                     tbPassword.Text = ""
                     tbConfirmPassword.Text = ""

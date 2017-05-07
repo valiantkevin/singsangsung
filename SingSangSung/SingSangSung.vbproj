@@ -105,6 +105,12 @@
     <Compile Include="FormMain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormNewEmployee.Designer.vb">
+      <DependentUpon>FormNewEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormPayment.Designer.vb">
       <DependentUpon>FormPayment.vb</DependentUpon>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewEmployee.resx">
+      <DependentUpon>FormNewEmployee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPayment.resx">
       <DependentUpon>FormPayment.vb</DependentUpon>
