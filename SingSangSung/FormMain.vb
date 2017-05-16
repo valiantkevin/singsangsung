@@ -445,7 +445,7 @@ Public Class FormMain
         start = myDataReader("time_start")
         Dim fin As Date = start.AddHours(myDataReader("time_length"))
         If Compare(fin, Date.Now()) Then
-
+            lbTimeLeft.Text = DateDiff(DateInterval.Hour, Date.Now, fin) & ":" & DateDiff(DateInterval.Minute, Date.Now, fin) Mod 60 & ":" & DateDiff(DateInterval.Second, Date.Now, fin) Mod 60 & " Left"
         Else
             lbTimeLeft.Text = "00:00:00 Left"
         End If
@@ -472,5 +472,9 @@ Public Class FormMain
             form.Show()
             Me.Hide()
         End If
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
     End Sub
 End Class

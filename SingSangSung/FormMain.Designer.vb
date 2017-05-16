@@ -22,6 +22,7 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.UsernameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChangePasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -59,6 +60,7 @@ Partial Class FormMain
         Me.lbRoomNumber = New System.Windows.Forms.Label()
         Me.pnRoomInfo = New System.Windows.Forms.Panel()
         Me.lbRoomCapacity = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -404,6 +406,9 @@ Partial Class FormMain
         Me.lbRoomCapacity.TabIndex = 3
         Me.lbRoomCapacity.Text = "Max 6 Persons"
         '
+        'Timer1
+        '
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -471,4 +476,5 @@ Partial Class FormMain
     Friend WithEvents AddNewMenuToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents chPriceTotal As ColumnHeader
     Friend WithEvents AddNewEmployeeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
 End Class
