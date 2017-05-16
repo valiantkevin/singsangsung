@@ -10,4 +10,5 @@ Module DBModule
     Public numberOfRoom As Integer
     Public roomList As Dictionary(Of Integer, Integer) = New Dictionary(Of Integer, Integer)
     Public transactionUnpaid As Queue(Of Integer) = New Queue(Of Integer)
+    Public activePaymentNumber As Integer
 End Module

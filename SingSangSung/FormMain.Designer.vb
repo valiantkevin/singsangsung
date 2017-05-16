@@ -31,6 +31,7 @@ Partial Class FormMain
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewRoomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddNewEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.btPayment = New System.Windows.Forms.Button()
         Me.pnFnB = New System.Windows.Forms.Panel()
@@ -58,7 +59,6 @@ Partial Class FormMain
         Me.lbRoomNumber = New System.Windows.Forms.Label()
         Me.pnRoomInfo = New System.Windows.Forms.Panel()
         Me.lbRoomCapacity = New System.Windows.Forms.Label()
-        Me.AddNewEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -116,20 +116,26 @@ Partial Class FormMain
         '
         Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewRoomToolStripMenuItem, Me.AddNewMenuToolStripMenuItem, Me.AddNewEmployeeToolStripMenuItem})
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(137, 26)
         Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'AddNewRoomToolStripMenuItem
         '
         Me.AddNewRoomToolStripMenuItem.Name = "AddNewRoomToolStripMenuItem"
-        Me.AddNewRoomToolStripMenuItem.Size = New System.Drawing.Size(190, 26)
+        Me.AddNewRoomToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
         Me.AddNewRoomToolStripMenuItem.Text = "Add New Room"
         '
         'AddNewMenuToolStripMenuItem
         '
         Me.AddNewMenuToolStripMenuItem.Name = "AddNewMenuToolStripMenuItem"
-        Me.AddNewMenuToolStripMenuItem.Size = New System.Drawing.Size(190, 26)
+        Me.AddNewMenuToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
         Me.AddNewMenuToolStripMenuItem.Text = "Add New Menu"
+        '
+        'AddNewEmployeeToolStripMenuItem
+        '
+        Me.AddNewEmployeeToolStripMenuItem.Name = "AddNewEmployeeToolStripMenuItem"
+        Me.AddNewEmployeeToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.AddNewEmployeeToolStripMenuItem.Text = "Add New Employee"
         '
         'SplitContainer1
         '
@@ -397,12 +403,6 @@ Partial Class FormMain
         Me.lbRoomCapacity.Size = New System.Drawing.Size(101, 17)
         Me.lbRoomCapacity.TabIndex = 3
         Me.lbRoomCapacity.Text = "Max 6 Persons"
-        '
-        'AddNewEmployeeToolStripMenuItem
-        '
-        Me.AddNewEmployeeToolStripMenuItem.Name = "AddNewEmployeeToolStripMenuItem"
-        Me.AddNewEmployeeToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
-        Me.AddNewEmployeeToolStripMenuItem.Text = "Add New Employee"
         '
         'FormMain
         '

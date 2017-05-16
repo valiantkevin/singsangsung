@@ -12,7 +12,7 @@ Public Class FormAddMenu
         If IsNullOrWhiteSpace(tbCode.Text) Or IsNullOrWhiteSpace(tbName.Text) Or IsNullOrWhiteSpace(tbPrice.Text) Then
             MsgBox("Code or Name or Price can't be empty")
         Else
-            Dim query As String = "SELECT * FROM fnb"
+            Dim query As String = "SELECT * FROM fnb WHERE fnb_id='" & tbCode.Text & "'"
             If myConn.State = ConnectionState.Closed Then
                 myConn.Open()
             End If

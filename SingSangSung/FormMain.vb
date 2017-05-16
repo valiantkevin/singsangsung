@@ -90,6 +90,11 @@ Public Class FormMain
             myDataReader.Close()
         End If
         refreshList()
+        If Not tbCustomerName.Enabled Then
+            refreshRoomTimer(transactionNumber)
+        Else
+            lbTimeLeft.Text = "00:00:00 Left"
+        End If
     End Sub
     Private Sub ChangePasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChangePasswordToolStripMenuItem.Click
         Dim form As New FormChangePass()
@@ -190,27 +195,39 @@ Public Class FormMain
         If Not myDataReader.IsClosed() Then
             myDataReader.Close()
         End If
-        Dim form As New FormAddRoom
-        form.Show()
-        Me.Hide()
+        If isAdmin = 0 Then
+            MsgBox("you're not authorized")
+        Else
+            Dim form As New FormAddRoom
+            form.Show()
+            Me.Hide()
+        End If
     End Sub
 
     Private Sub AddNewMenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewMenuToolStripMenuItem.Click
         If Not myDataReader.IsClosed() Then
             myDataReader.Close()
         End If
-        Dim form As New FormAddMenu
-        form.Show()
-        Me.Hide()
+        If isAdmin = 0 Then
+            MsgBox("you're not authorized")
+        Else
+            Dim form As New FormAddMenu
+            form.Show()
+            Me.Hide()
+        End If
     End Sub
 
     Private Sub AddNewEmployeeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewEmployeeToolStripMenuItem.Click
         If Not myDataReader.IsClosed() Then
             myDataReader.Close()
         End If
-        Dim form As New FormNewEmployee
-        form.Show()
-        Me.Hide()
+        If isAdmin = 0 Then
+            MsgBox("you're not authorized")
+        Else
+            Dim form As New FormNewEmployee
+            form.Show()
+            Me.Hide()
+        End If
     End Sub
 
     Private Sub btInsert_Click(sender As Object, e As EventArgs) Handles btInsert.Click
@@ -375,6 +392,7 @@ Public Class FormMain
                 Dim item As ListViewItem = New ListViewItem(New String() {myDataReader("fnb_name"), a.Value, myDataReader("fnb_price"), myDataReader("fnb_price") * a.Value})
                 total = total + (myDataReader("fnb_price") * a.Value)
                 lvFnB.Items.Add(item)
+                myDataReader.Close()
             Next
             If Not myDataReader.IsClosed Then
                 myDataReader.Close()
@@ -408,4 +426,51 @@ Public Class FormMain
         End If
     End Sub
 
+    Private Sub refreshRoomTimer(transactionNumber As Integer)
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
+        Dim query As String = "SELECT * FROM room_ol WHERE transaction_id=" & transactionNumber
+        If myConn.State = ConnectionState.Closed Then
+            myConn.Open()
+        End If
+        If myCommand Is Nothing Then
+            myCommand = New MySqlCommand(query, myConn)
+        Else
+            myCommand.CommandText = query
+        End If
+        myDataReader = myCommand.ExecuteReader
+        myDataReader.Read()
+        Dim start As Date
+        start = myDataReader("time_start")
+        Dim fin As Date = start.AddHours(myDataReader("time_length"))
+        If Compare(fin, Date.Now()) Then
+
+        Else
+            lbTimeLeft.Text = "00:00:00 Left"
+        End If
+    End Sub
+
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
+        Dim form As New frLogin
+        form.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btPayment_Click(sender As Object, e As EventArgs) Handles btPayment.Click
+        If Not myDataReader.IsClosed() Then
+            myDataReader.Close()
+        End If
+        If tbCustomerName.Enabled Then
+            MsgBox("Room is not occupied")
+        Else
+            roomList.TryGetValue(lbRoomNumber.Text.Substring(5), activePaymentNumber)
+            Dim form As New FormPayment
+            form.Show()
+            Me.Hide()
+        End If
+    End Sub
 End Class
