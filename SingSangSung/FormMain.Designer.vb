@@ -349,12 +349,12 @@ Partial Class FormMain
         '
         Me.lbTimeLeft.AutoSize = True
         Me.lbTimeLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
-        Me.lbTimeLeft.Location = New System.Drawing.Point(190, 49)
+        Me.lbTimeLeft.Location = New System.Drawing.Point(247, 49)
         Me.lbTimeLeft.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTimeLeft.Name = "lbTimeLeft"
-        Me.lbTimeLeft.Size = New System.Drawing.Size(524, 48)
+        Me.lbTimeLeft.Size = New System.Drawing.Size(263, 48)
         Me.lbTimeLeft.TabIndex = 0
-        Me.lbTimeLeft.Text = "56 Minutes, 6 Seconds Left"
+        Me.lbTimeLeft.Text = "00:00:00 Left"
         '
         'lbRoomPrice
         '
@@ -408,7 +408,6 @@ Partial Class FormMain
         '
         'Timer1
         '
-        Me.Timer1.Interval = 1000
         '
         'FormMain
         '

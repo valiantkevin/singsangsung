@@ -1,7 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.String
 Public Class FormMain
-    Dim listOfRoom As List(Of Button)
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Not myDataReader.IsClosed() Then
             myDataReader.Close()
@@ -27,7 +26,6 @@ Public Class FormMain
                 room.Text = "Room " & myDataReader("room_id")
                 AddHandler room.Click, AddressOf btRoom_Click
                 SplitContainer1.Panel1.Controls.Add(room)
-                listOfRoom.Add(room)
                 i = i + 1
             End While
         End If
