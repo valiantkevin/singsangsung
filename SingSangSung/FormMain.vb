@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.String
 Public Class FormMain
+    Dim listOfRoom As List(Of Button)
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Not myDataReader.IsClosed() Then
             myDataReader.Close()
@@ -26,6 +27,7 @@ Public Class FormMain
                 room.Text = "Room " & myDataReader("room_id")
                 AddHandler room.Click, AddressOf btRoom_Click
                 SplitContainer1.Panel1.Controls.Add(room)
+                listOfRoom.Add(room)
                 i = i + 1
             End While
         End If
@@ -33,6 +35,7 @@ Public Class FormMain
             myDataReader.Close()
         End If
         refreshStatus()
+        Timer1.Enabled = True
     End Sub
     Private Sub btRoom_Click(sender As Object, e As EventArgs)
         If Not myDataReader.IsClosed() Then
@@ -440,15 +443,17 @@ Public Class FormMain
             myCommand.CommandText = query
         End If
         myDataReader = myCommand.ExecuteReader
-        myDataReader.Read()
-        Dim start As Date
-        start = myDataReader("time_start")
-        Dim fin As Date = start.AddHours(myDataReader("time_length"))
-        If Compare(fin, Date.Now()) Then
-            lbTimeLeft.Text = DateDiff(DateInterval.Hour, Date.Now, fin) & ":" & DateDiff(DateInterval.Minute, Date.Now, fin) Mod 60 & ":" & DateDiff(DateInterval.Second, Date.Now, fin) Mod 60 & " Left"
-        Else
-            lbTimeLeft.Text = "00:00:00 Left"
+        If myDataReader.Read() Then
+            Dim start As Date
+            start = myDataReader("time_start")
+            Dim fin As Date = start.AddHours(myDataReader("time_length"))
+            If DateDiff(DateInterval.Second, Date.Now(), fin) > 0 Then
+                lbTimeLeft.Text = DateDiff(DateInterval.Hour, Date.Now, fin) & ":" & DateDiff(DateInterval.Minute, Date.Now, fin) Mod 60 & ":" & DateDiff(DateInterval.Second, Date.Now, fin) Mod 60 & " Left"
+            Else
+                lbTimeLeft.Text = "00:00:00 Left"
+            End If
         End If
+        myDataReader.Close()
     End Sub
 
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
@@ -475,6 +480,8 @@ Public Class FormMain
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-
+        Dim transactionNumber As Integer
+        roomList.TryGetValue(lbRoomNumber.Text.Substring(5), transactionNumber)
+        refreshRoomTimer(transactionNumber)
     End Sub
 End Class

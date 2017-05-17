@@ -349,7 +349,7 @@ Partial Class FormMain
         '
         Me.lbTimeLeft.AutoSize = True
         Me.lbTimeLeft.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!)
-        Me.lbTimeLeft.Location = New System.Drawing.Point(108, 47)
+        Me.lbTimeLeft.Location = New System.Drawing.Point(190, 49)
         Me.lbTimeLeft.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTimeLeft.Name = "lbTimeLeft"
         Me.lbTimeLeft.Size = New System.Drawing.Size(524, 48)
@@ -408,6 +408,7 @@ Partial Class FormMain
         '
         'Timer1
         '
+        Me.Timer1.Interval = 1000
         '
         'FormMain
         '

@@ -1,21 +1,19 @@
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\SingSangSung.exe.config
-C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\SingSangSung.exe
-C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\SingSangSung.pdb
-C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\SingSangSung.xml
-C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.vbprojResolveAssemblyReference.cache
-C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.frLogin.resources
-C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormMain.resources
-C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.Resources.resources
-C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.vbproj.GenerateResource.Cache
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.exe
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.xml
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.pdb
-D:\UKDW\SMT 4\GUI\PROJECT\singsangsung-master_2\singsangsung-master\SingSangSung\bin\Debug\SingSangSung.exe.config
-D:\UKDW\SMT 4\GUI\PROJECT\singsangsung-master_2\singsangsung-master\SingSangSung\obj\Debug\SingSangSung.xml
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\SingSangSung.exe
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\SingSangSung.pdb
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\SingSangSung.xml
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\MySql.Data.dll
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\bin\Debug\MySql.Data.xml
-C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormPayment.resources
-C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormChangePass.resources
-C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormAddRoom.resources
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.vbprojResolveAssemblyReference.cache
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormAddMenu.resources
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormAddRoom.resources
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormChangePass.resources
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.frLogin.resources
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormMain.resources
 C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormNewEmployee.resources
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.FormPayment.resources
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.Resources.resources
+C:\Users\valiantkevin\Documents\Visual Studio 2015\Projects\SingSangSung\SingSangSung\obj\Debug\SingSangSung.vbproj.GenerateResource.Cache
